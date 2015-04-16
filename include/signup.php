@@ -35,7 +35,7 @@ if(isset($_POST['submit'])){
 ?>
 	<div class="col-md-8 col-md-offset-2 contact">
     <div class="col-sm-5" style="margin-top:93px;">
-    <?php if(isset($_GET['msg'])){ echo 'برای درج آگهی ابتدا باید ثبت نام کنید'; } ?>
+    <?php if(isset($_GET['msg'])){ echo "<p class='text-center'> برای درج آگهی ابتدا باید ثبت نام کنید </p>"; } ?>
     	<div class="text-center info panel panel-default">
             	<div class="panel-heading">امکانات وِیژه بانک مشاغل ایران</div>
 

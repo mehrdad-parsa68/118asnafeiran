@@ -2,17 +2,17 @@
 <div>
 	<div class="col-md-10 col-md-offset-1 contact">
 		<h2>ارتباط با ما</h2>
-   		 <hr>
+   		 <hr class="hr-normal">
    	 	<div class="col-sm-6 pull-right text-center">
     	<p>آدرس : </p>
         <p>خیابان شهید بهشتی ، بعد از خیابان میرعماد، پلاک 294، طبقه پنجم ، واحد 501</p>
-        <hr>
+        <hr class="hr-good">
         <p>تلفن : </p>
         <p>88759591 - 021</p>
-        <hr>
+        <hr class="hr-good">
         <p>خط ویژه : </p>
         <p>88507922 - 021</p>
-         <hr>
+        <hr class="hr-good">
         <p>ایمیل :</p>
         <p>info@iranm118.ir</p>
    	 	</div>

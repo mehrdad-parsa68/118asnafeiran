@@ -8,20 +8,31 @@
     <div class="advertise">
     <h2 class="text-center">آخرین آگهی های ثبت شده در بانک مشاغل ایران</h2>
     <hr class="hr-good">
-    	<div class="col-md-4">
-        	<div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title text-center">آموزش</h3>
+    <?php 
+	while($main_row = mysqli_fetch_assoc($main_result)){
+		
+		echo "
+		
+		<div class='col-md-4'>
+        	<div class='panel panel-default'>
+            <div class='panel-heading'>
+              <h3 class='panel-title text-center'>آموزش</h3>
             </div>
-            <div class="panel-body">
-            	<div class="special text-center">
-					<img src="images/logo.jpg" width="100%">
-               		<p>آگهی اول</p>
+            <div class='panel-body'>
+            	<div class='special text-center'>
+					<img src='images/advertise/$main_row[image].jpg' width='100%'>
+               		<p><a href='#'>$main_row[name]</a></p>
            		 </div>
                  
             </div>
             </div>
 		 </div>
+		
+		";
+		
+		}
+		?>
+    	
         <div class="col-md-4">
         	<div class="panel panel-default">
             <div class="panel-heading">

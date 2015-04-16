@@ -1,4 +1,4 @@
-<div class="contact category">
+<div class="col-xs-10 col-xs-offset-1 contact category">
 <h1>فهرست مشاغل : </h1>
 <hr>
 <?php

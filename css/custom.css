@@ -115,7 +115,9 @@ footer hr {
 	margin-top:20px;
 	}
 .main{
-	
+	padding:0 !important;
+	margin-left:0 !important;
+	margin-right:0 !important;
 	margin-top:50px;
 	height:auto;
 	}
@@ -136,121 +138,7 @@ footer hr {
 	
 	}
 
-.cat{
-	display:inline-block;
-	width:48px;
-	height:48px;
-	background-size:48px 48px;
-	}
-.cat-1{
-	background-image:url(../images/category/amoozesh_pajoohesh.png);
 
-	}
-.cat-1:hover {
-	background-image:url(../images/category/amoozesh_pajoohesh_y.png);
-	}
-.cat-2{
-	background-image:url(../images/category/arayeshi_zibaee.png);
-	}
-.cat-2:hover {
-	background-image:url(../images/category/arayeshi_zibaee_y.png);
-	}
-.cat-3{
-	background-image:url(../images/category/behdasht_darman.png);
-	}
-.cat-3:hover {
-	background-image:url(../images/category/behdasht_darman_y.png);
-	}
-.cat-4{
-	background-image:url(../images/category/chap_tablighat.png);
-	}
-.cat-4:hover {
-	background-image:url(../images/category/chap_tablighat_y.png);
-	}
-.cat-5{
-	background-image:url(../images/category/fanavari_etelaat.png);
-	}
-.cat-5:hover {
-	background-image:url(../images/category/fanavari_etelaat_y.png);
-	}
-.cat-6{
-	background-image:url(../images/category/hamlonaghl.png);
-	}
-.cat-6:hover {
-	background-image:url(../images/category/hamlonaghl_y.png);
-	}
-.cat-7{
-	background-image:url(../images/category/khadamat_majales.png);
-	}
-.cat-7:hover {
-	background-image:url(../images/category/khadamat_majales_y.png);
-	}
-.cat-8{
-	background-image:url(../images/category/lavazem_khanegi.png);
-	}
-.cat-8:hover {
-	background-image:url(../images/category/lavazem_khanegi_y.png);
-	}
-.cat-9{
-	background-image:url(../images/category/mashin_abzar.png);
-	}
-.cat-9:hover {
-	background-image:url(../images/category/mashin_abzar_y.png);
-	}
-.cat-10{
-	background-image:url(../images/category/moshavere.png);
-	}
-.cat-10:hover {
-	background-image:url(../images/category/moshavere_y.png);
-	}
-.cat-11{
-	background-image:url(../images/category/otomobil.png);
-	}
-.cat-11:hover {
-	background-image:url(../images/category/otomobil_y.png);
-	}
-.cat-12{
-	background-image:url(../images/category/pooshak.png);
-	}
-.cat-12:hover {
-	background-image:url(../images/category/pooshak_y.png);
-	}
-.cat-13{
-	background-image:url(../images/category/restooran.png);
-	}
-.cat-13:hover {
-	background-image:url(../images/category/restooran_y.png);
-	}
-.cat-14{
-	background-image:url(../images/category/safar_gardeshgari.png);
-	}
-.cat-14:hover {
-	background-image:url(../images/category/safar_gardeshgari_y.png);
-	}
-.cat-15{
-	background-image:url(../images/category/sakhteman.png);
-	}
-.cat-15:hover {
-	background-image:url(../images/category/sakhteman_y.png)
-	}
-.cat-16{
-	background-image:url(../images/category/sanat_madan.png);
-	}
-.cat-16:hover {
-	background-image:url(../images/category/sanat_madan_y.png);
-	}
-.cat-17{
-	background-image:url(../images/category/tasisat.png);
-	}
-.cat-17:hover {
-	background-image:url(../images/category/tasisat_y.png);
-	}
-.cat-18{
-	background-image:url(../images/category/varzesh_tafrih.png);
-	}
-.cat-18:hover {
-	background-image:url(../images/category/varzesh_tafrih_y.png);
-	}
 .parallax{
 	height:400px;
 	background-image:url(../images/paralax.jpg);

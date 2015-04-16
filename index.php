@@ -10,6 +10,10 @@
 		return $row['name'];
 		}
 	if(isset($_SESSION['MM_ID'])){}
+	################################
+	$main_query = "SELECT * FROM `advertises`" ;
+	$main_result =  mysqli_query($connection,$main_query);
+	
 ?>
 <!DOCTYPE html>
 <html>
@@ -197,17 +201,17 @@
             	<h2>لینک های مرتبط</h2>
                 <hr>
                 <ul class="col-sm-6 text-center pull-right">
-                	<li><a href="#">درباره ایران 118</a></li>
-                    <li><a href="#">سفارش آگهی</a></li>
-                    <li><a href="#">تعرفه آگهی‌</a></li>
-                    <li><a href="#">استخدام</a></li>
+                	<li><a href="#">درباره بانک مشاغل ایران</a></li>
+                    <li><a href="#">نمایندگی ها‌</a></li>
+                    <li><a href="#">ثبت نام</a></li>
+			        <li><a href="#">ورود</a></li>
                     
                 </ul>
                 <ul class="col-sm-6 text-center pull-right">
                 	<li><a href="#">حریم شخصی کاربران</a></li>
                     <li><a href="#">فهرست مشاغل</a></li>
-                    <li><a href="#">شرایط استفاده</a></li>
-                    <li><a href="#">شبکه اجتماعی</a></li>
+                    <li><a href="#">جستجو</a></li>
+                    <li><a href="#">ارتباط با ما</a></li>
                     
                 </ul>
             </div>
