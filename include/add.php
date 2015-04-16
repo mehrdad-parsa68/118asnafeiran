@@ -29,7 +29,7 @@ while($categories_row = mysqli_fetch_assoc($categories_result)){
 if(isset($_POST['submit'])){
     $name = $_POST['name'];
     $cat_id = $_POST['cat_id'];
-	$sub_cat_id = $_POST['sub_cat_id'];
+	$location = $_POST['address'];
     $slogan = $_POST['slogan'];
 	$city_id = $_POST['city_id'];
     $province_id = $_POST['province_id'];
@@ -48,9 +48,10 @@ if(isset($_POST['submit'])){
 		$address = "images/advertise/$picture[name]";
 		move_uploaded_file($picture['tmp_name'],$address);
 		
-        $advertise_query = "INSERT INTO `advertises`(`id`, `name`, `cat_id`, `sub_cat_id`, `slogan`, `city_id`, `province_id`, `image`, `address`, `phone`, `mobile`, `email`, `website`, `keywords`, `register_date`, `google_map`, `activate`) VALUES ('','$name','$cat_id','$sub_cat_id','$slogan','$city_id','$province_id','$picture[name]','$address','$phone','$mobile','$email','$website','$keywords','$register_date','','0')";
-		//echo $advertise_query;
+        $advertise_query = "INSERT INTO `advertises`(`id`, `name`, `cat_id`, `sub_cat_id`, `slogan`, `city_id`, `province_id`, `address`, `phone`, `mobile`, `email`, `website`, `keywords`, `register_date`, `google_map`, `activate`, `user_id`,`image`) VALUES ('','$name','$cat_id','0','$slogan','$city_id','$province_id','$location','$phone','$mobile','$email','$website','$keywords','$register_date','','0','5','$picture[name]')";
+		echo $advertise_query;
         $advertise_result = mysqli_query($connection , $advertise_query);
+		var_dump($advertise_result);
         if($advertise_result){
             $error = '
             <div class="alert alert-success alert-dismissible" role="alert">
@@ -70,11 +71,15 @@ if(isset($_POST['submit'])){
 }
 
 ?>
-	<div class="col-md-8 col-md-offset-2 contact">
+	<div class="col-md-10 col-md-offset-1 contact">
 
     <div class="col-sm-12">
 		<h2>ثبت اطلاعات واحد شغلی</h2>
-   		 <hr>
+   		 <hr class="hr-normal">
+         <p><i class="fa fa-star"></i> لطفا اطلاعات خود را با زبان فارسی وارد نمایید.</p>
+         <p><i class="fa fa-star"></i>در قسمت کلمات کلیدی، کلمات را با یک فاصله و یک خط تیره (-) از هم جدا نمایید.</p>
+         <p><i class="fa fa-star"></i>حجم تصویر تجاری کمتر از 300 کیلوبایت باشد.</p>
+         <br>
          <form class="form-horizontal" method="post" enctype="multipart/form-data">
   <div class="form-group">
     <label for="name" class="col-sm-3 control-label pull-right">نام واحد شغلی</label>
@@ -84,14 +89,11 @@ if(isset($_POST['submit'])){
   </div>
   <div class="form-group">
     <label for="cat_id" class="col-sm-3 control-label pull-right">زمینه فعالیت</label>
-    <div class="col-sm-4">
-      <select type="text" class="form-control pull-right" disabled name="cat_id" id="sub_category">
-      </select>
-    </div>
-    <div class="col-sm-5">
+    
+    <div class="col-sm-9">
       <select type="text" class="form-control pull-right" name="cat_id" id="category">
-      	<option value="-1">sdsd</option>
-       
+      	<option value="-1">لطفا زمینه فعالیت را انتخاب نمایید</option>
+     <?php echo  $categories ?>
       </select>
     </div>
   </div>

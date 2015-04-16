@@ -125,7 +125,7 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-	<nav class="nav-right text-center">
+	<nav class="nav-right text-center col-xs-1 pull-right">
     	<div class="nav-ico">
         <a href="?page=home">
         	<img src="images/logo.png" width="40">
@@ -173,7 +173,7 @@
             </a>
         </div>
     </nav>
-    <section class="main">
+    <section class="main col-xs-11">
     
  		<?php
 	if(isset($_GET['page'])){

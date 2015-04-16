@@ -15,20 +15,9 @@ if(!isset($_SESSION['MM_ID'])){
 <div class="col-xs-12">
 	<h2>پنل مدیریت بانک مشاغل ایران</h2>
     <hr class="hr-beauty">
-    <div class="col-xs-4">
-    <h3><i class="fa fa-user"></i> اطلاعات شخصی : </h3>
-    <hr class="hr-beauty">
-	<p> نام کاربر : <?php echo "$user_row[first_name]"." "."$user_row[last_name]"; ?> </p>
-    <p> کد ملی : <?php echo "$user_row[melli_code]"; ?> </p>
-    <p> ایمیل : <?php echo "$user_row[email]"; ?> </p>
-    <p> موبایل : <?php echo "$user_row[mobile]"; ?> </p>
-    <p> پسورد : <?php echo "*******"; ?> </p>
-    <button type="button" class="btn btn-submit" data-toggle="modal" data-target="#myModal">
-  ویرایش اطلاعات شخصی
-</button>
-</div>
+    
 
-<div class="col-xs-4">
+<div class="col-xs-8">
     <h3><i class="fa fa-user"></i> اطلاعات شغلی : </h3>
     <hr class="hr-beauty">
     <?php 
@@ -39,12 +28,18 @@ if(!isset($_SESSION['MM_ID'])){
 			}
 			
 	?>
-	<p> نام کاربر : <?php echo "$advertise_row[first_name]"." "."$user_row[last_name]"; ?> </p>
-    <p> کد ملی : <?php echo "$advertise_row[melli_code]"; ?> </p>
-    <p> ایمیل : <?php echo "$advertise_row[email]"; ?> </p>
-    <p> موبایل : <?php echo "$advertise_row[mobile]"; ?> </p>
-    <p> ایمیل : <?php echo "$advertise_row[email]"; ?> </p>
-    <p> موبایل : <?php echo "$advertise_row[mobile]"; ?> </p>
+	<p class="col-sm-6 pull-right"> نام واحد شغلی : <?php echo "$advertise_row[name]"; ?> </p>
+    <p class="col-sm-6 pull-right"> زمینه فعالیت : <?php echo "$advertise_row[cat_id]"; ?> </p>
+    <p class="col-sm-6 pull-right"> شعار : <?php echo "$advertise_row[slogan]"; ?> </p>
+    <p class="col-sm-6 pull-right"> استان : <?php echo "$advertise_row[province]"; ?> </p>
+    <p class="col-sm-6 pull-right"> شهرستان : <?php echo "$advertise_row[city]"; ?> </p>
+    <p class="col-sm-6 pull-right"> آدرس : <?php echo "$advertise_row[address]"; ?> </p>
+    <p class="col-sm-6 pull-right"> تلفن : <?php echo "$advertise_row[phone]"; ?> </p>
+    <p class="col-sm-6 pull-right"> موبایل : <?php echo "$advertise_row[mobile]"; ?> </p>
+    <p class="col-sm-6 pull-right"> ایمیل : <?php echo "$advertise_row[email]"; ?> </p>
+    <p class="col-sm-6 pull-right"> وب سایت : <?php echo "$advertise_row[website]"; ?> </p>
+    <p class="col-sm-6 pull-right"> کلمات کلیدی : <?php echo "$advertise_row[keywords]"; ?> </p>
+    <p class="col-sm-6 pull-right"> نقشه گوگل : <?php echo "$advertise_row[google_map]"; ?> </p>
     <button type="button" class="btn btn-submit" data-toggle="modal" data-target="#myModal">
   ویرایش اطلاعات شخصی
 </button>

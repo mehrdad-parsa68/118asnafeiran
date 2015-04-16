@@ -1,4 +1,4 @@
-<div class="container contact category">
+<div class="contact category">
 <h1>فهرست مشاغل : </h1>
 <hr>
 <?php
@@ -6,9 +6,9 @@
 	$result = mysqli_query($connection,$query);
 	while($row = mysqli_fetch_assoc($result)){
     	echo	
-			"
+			"	<ul>
 				<li class='col-sm-3'><i class='fa fa-check'></i><a href='#' class='link'> $row[name] </a></li>
-			
+			</ul>
 			";
 	}
 ?>		
