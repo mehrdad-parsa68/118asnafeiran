@@ -24,13 +24,13 @@
     <meta name="keywords" contenet="برین ,برین کارت ,کارت تخفیف , تخفیف کارت ,بیشترین تخفیف, کارت تخفیف برین" http-equiv="Content-Type" content="text/html">
     <meta name="description" content="برین ,برین کارت ,کارت تخفیف , تخفیف کارت ,بیشترین تخفیف, کارت تخفیف برین">
     <meta name="author" content="rayweb.ir">
-    <link rel="icon" href="{$obj->site_address}favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/custom.css">
-    <link rel="stylesheet" type="text/css" href="css/slider.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/component.css">
-    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+    <link rel="icon" href="<?php echo $prefix; ?>/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="<?php echo $prefix; ?>/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $prefix; ?>/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $prefix; ?>/css/slider.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $prefix; ?>/css/style.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $prefix; ?>/css/component.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $prefix; ?>/font-awesome/css/font-awesome.min.css">
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -50,8 +50,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="?page=home">
-      	<img src="images/logo.png" width="50">
+      <a class="navbar-brand" href="<?php echo $prefix; ?>/index.php?page=home">
+      	<img src="<?php echo $prefix; ?>/images/logo.png" width="50">
       </a>
     </div>
 
@@ -113,14 +113,14 @@
          <li><a href="#"> انتخاب استان <i class="fa fa-angle-double-left"></i></a></li>
          <?php 
 			 if(!isset($_SESSION['MM_ID'])){
-				 echo '<li><a href="?page=signin"><i class="fa fa-sign-in"></i> ورود</a></li>
-				 	   <li><a href="?page=signup"><i class="fa fa-user"></i> ثبت نام</a></li>';
+				 echo '<li><a href="'.$prefix.'/page/users/signin/"><i class="fa fa-sign-in"></i> ورود</a></li>
+				 	   <li><a href="'.$prefix.'/page/users/signup/"><i class="fa fa-user"></i> ثبت نام</a></li>';
 			 }else{
 				 $user_query = "SELECT * FROM users WHERE id = '$_SESSION[MM_ID]' ; ";
 				 $user_result = mysqli_query($connection , $user_query);
 				 $user_row = mysqli_fetch_assoc($user_result);
 				 echo '<li><a href="signout.php"><i class="fa fa-sign-out"></i> خروج</a></li>
-				 	   <li><a href="?page=mypage"><i class="fa fa-user"></i> '.$user_row['first_name'].' '.$user_row['last_name'].'</a></li>';
+				 	   <li><a href="'.$prefix.'/page/users/mypage/"><i class="fa fa-user"></i> '.$user_row['first_name'].' '.$user_row['last_name'].'</a></li>';
 				 }
          ?>
        
@@ -132,7 +132,7 @@
 	<nav class="nav-right text-center col-xs-1 pull-right">
     	<div class="nav-ico">
         <a href="?page=home">
-        	<img src="images/logo.png" width="40">
+        	<img src="<?php echo $prefix; ?>/images/logo.png" width="40">
             <br>
             <p class="logo">بانک</p>
             <p class="logo">مشاغل ایران</p>
@@ -143,7 +143,7 @@
 			if(isset($_SESSION['MM_ID'])){
 				echo "
 				<div class='nav-ico'>
-        	<a href='?page=mypage'>
+        	<a href='$prefix/page/users/mypage/'>
         		<p><i class='fa fa-user'></i></p>
                 <p>صفحه من</p>
             </a>
@@ -152,26 +152,26 @@
 				}
 		?>
     	<div class="nav-ico">
-        	<a href="?page=categories">
+        	<a href="<?php echo $prefix; ?>/page/asnaf/categories/">
         		<p><i class="fa fa-list"></i></p>
                 <p>فهرست مشاغل</p>
             </a>
         </div>
         <div class="nav-ico">
-        	<a href="?page=add">
+        	<a href="<?php echo $prefix; ?>/page/asnaf/add/">
         		<p><i class="fa fa-plus"></i></p>
                 <p>درج آگهی</p>
             </a>
         </div>
         <div class="nav-ico">
-        	<a>
+        	<a href="<?php echo $prefix; ?>/page/asnaf/search/">
         		<p><i class="fa fa-search"></i></p>
                 <p>جستجو</p>
             </a>
         </div>
         
         <div class="nav-ico">
-        	<a href="?page=contact">
+        	<a href="<?php echo $prefix; ?>/page/asnaf/contact/">
         		<p><i class="fa fa-phone"></i></p>
                 <p>ارتباط با ما</p>
             </a>
@@ -225,7 +225,7 @@
             </div>
         </div>
         
-        <p class="text-center social"><a href="#"><img src="images/fb.png"></a><a href="#"><img src="images/tw.png"></a><a href="#"><img src="images/go.png"></a></p>
+        <p class="text-center social"><a href="#"><img src="<?php echo $prefix; ?>/images/fb.png"></a><a href="#"><img src="<?php echo $prefix; ?>/images/tw.png"></a><a href="#"><img src="images/go.png"></a></p>
     </footer>
     <div class="footer-end">
         	<h5 class="text-center">تمامی حقوق این وب سایت متعلق به شرکت یگانه نوآوران پویا می باشد.</h5>
@@ -235,11 +235,11 @@
    
 
 
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/custom.js"></script>
-<script src="js/modernizr.custom.js"></script>
-<script src="js/cbpTooltipMenu.min.js"></script>
+<script src="<?php echo $prefix; ?>/js/jquery.easing.1.3.js"></script>
+<script src="<?php echo $prefix; ?>/js/bootstrap.min.js"></script>
+<script src="<?php echo $prefix; ?>/js/custom.js"></script>
+<script src="<?php echo $prefix; ?>/js/modernizr.custom.js"></script>
+<script src="<?php echo $prefix; ?>/js/cbpTooltipMenu.min.js"></script>
 <script>
 	var menu = new cbpTooltipMenu( document.getElementById( 'cbp-tm-menu' ) );
 </script>

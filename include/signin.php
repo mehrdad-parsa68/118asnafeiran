@@ -47,7 +47,7 @@ if(isset($_POST['submit'])){
     </div>
   </div>
  	 
- 	<p>اگر عضو نشده اید، همین حالا <a href="?page=signup">ثبت نام</a> کنید</p>
+ 	<p>اگر عضو نشده اید، همین حالا <a href="<?php echo $prefix; ?>/index.php?page=signup">ثبت نام</a> کنید</p>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <input type="submit" name="submit" class="btn-submit" value="ورود">
