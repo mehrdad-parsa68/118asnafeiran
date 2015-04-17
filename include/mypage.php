@@ -3,13 +3,33 @@ if(!isset($_SESSION['MM_ID'])){
 	header('Location: index.php?page=signup&msg=failed');
 }
  $id = $_SESSION['MM_ID'];
- $user_query = "SELECT * FROM `users` WHERE id = $id ";
- $user_result = mysqli_query($connection,$user_query);
- $user_row =  mysqli_fetch_assoc($user_result);
+ 
+ 
+ 
+ $user_info_query = "SELECT users.id, users.first_name, users.last_name, users.melli_code, users.email, users.mobile, users.city_id, users.province_id, users.address, city.id , city.name, city.province, province.id, province.name AS province_name
+  FROM `users`
+	INNER JOIN `city` ON users.city_id = city.id
+	INNER JOIN `province` ON city.province = province.id
+  WHERE users.id = '$id' ; ";
+
+ $user_info_result = mysqli_query($connection,$user_info_query);
+ $user_info_row =  mysqli_fetch_assoc($user_info_result);
+ 
+
  #######################################################
- $advertise_query = "SELECT * FROM `advertises` WHERE user_id = $id";
- $advertise_result = mysqli_query($connection,$advertise_query);
- $advertise_row =  mysqli_fetch_assoc($advertise_result);
+ 
+ $user_adv_query = "SELECT advertises.id, advertises.name, advertises.cat_id, advertises.sub_cat_id, advertises.slogan, advertises.city_id, advertises.province_id, advertises.address, advertises.phone, advertises.mobile, advertises.email, advertises.website, advertises.keywords, advertises.google_map, advertises.image,
+ city.id, city.name AS city_name, city.province,category.name AS cat_name,
+ province.id, province.name AS province_name
+  FROM `advertises`
+
+	INNER JOIN `city` ON advertises.city_id = city.id
+	INNER JOIN `province` ON advertises.province_id = province.id
+	INNER JOIN `category` ON category.id = advertises.cat_id
+  WHERE advertises.user_id = $id ; ";
+ $user_adv_result = mysqli_query($connection,$user_adv_query);
+ $user_adv_row =  mysqli_fetch_assoc($user_adv_result);
+
 ?>
 
 <div class="col-xs-12">
@@ -21,7 +41,7 @@ if(!isset($_SESSION['MM_ID'])){
     <h3 class="header-small"><i class="fa fa-gear"></i> اطلاعات شغلی : </h3>
   
     <?php 
-		if(!isset($advertise_row)){
+		if(!isset($user_row)){
 			echo "
 			
 				<p>شما هنوز اطلاعاتی وارد نکرده اید. در صورت نیاز <a href='?page=add'>کلیک</a> کنید.</p>
@@ -29,18 +49,18 @@ if(!isset($_SESSION['MM_ID'])){
 			}
 			
 	?>
-	<p class="col-sm-6 pull-right"> نام واحد شغلی : <?php echo "$advertise_row[name]"; ?> </p>
-    <p class="col-sm-6 pull-right"> زمینه فعالیت : <?php echo "$advertise_row[cat_id]"; ?> </p>
-    <p class="col-sm-6 pull-right"> شعار : <?php echo "$advertise_row[slogan]"; ?> </p>
-    <p class="col-sm-6 pull-right"> استان : <?php echo "$advertise_row[province]"; ?> </p>
-    <p class="col-sm-6 pull-right"> شهرستان : <?php echo "$advertise_row[city]"; ?> </p>
-    <p class="col-sm-6 pull-right"> آدرس : <?php echo "$advertise_row[address]"; ?> </p>
-    <p class="col-sm-6 pull-right"> تلفن : <?php echo "$advertise_row[phone]"; ?> </p>
-    <p class="col-sm-6 pull-right"> موبایل : <?php echo "$advertise_row[mobile]"; ?> </p>
-    <p class="col-sm-6 pull-right"> ایمیل : <?php echo "$advertise_row[email]"; ?> </p>
-    <p class="col-sm-6 pull-right"> وب سایت : <?php echo "$advertise_row[website]"; ?> </p>
-    <p class="col-sm-6 pull-right"> کلمات کلیدی : <?php echo "$advertise_row[keywords]"; ?> </p>
-    <p class="col-sm-6 pull-right"> نقشه گوگل : <?php echo "$advertise_row[google_map]"; ?> </p>
+	<p class="col-sm-6 pull-right"> نام واحد شغلی : <?php echo "$user_adv_row[name]"; ?> </p>
+    <p class="col-sm-6 pull-right"> زمینه فعالیت : <?php echo "$user_adv_row[cat_name]"; ?> </p>
+    <p class="col-sm-6 pull-right"> شعار : <?php echo "$user_adv_row[slogan]"; ?> </p>
+    <p class="col-sm-6 pull-right"> استان : <?php echo "$user_adv_row[province_name]"; ?> </p>
+    <p class="col-sm-6 pull-right"> شهرستان : <?php echo "$user_adv_row[city_name]"; ?> </p>
+    <p class="col-sm-6 pull-right"> آدرس : <?php echo "$user_adv_row[address]"; ?> </p>
+    <p class="col-sm-6 pull-right"> تلفن : <?php echo "$user_adv_row[phone]"; ?> </p>
+    <p class="col-sm-6 pull-right"> موبایل : <?php echo "$user_adv_row[mobile]"; ?> </p>
+    <p class="col-sm-6 pull-right"> ایمیل : <?php echo "$user_adv_row[email]"; ?> </p>
+    <p class="col-sm-6 pull-right"> وب سایت : <?php echo "$user_adv_row[website]"; ?> </p>
+    <p class="col-sm-6 pull-right"> کلمات کلیدی : <?php echo "$user_adv_row[keywords]"; ?> </p>
+    <p class="col-sm-6 pull-right"> نقشه گوگل : <?php echo "$user_adv_row[google_map]"; ?> </p>
     <div class="text-center">
     <button type="button" class="btn btn-submit" data-toggle="modal" data-target="#myModal">
   ویرایش اطلاعات شخصی
@@ -52,17 +72,55 @@ if(!isset($_SESSION['MM_ID'])){
 <div class="col-xs-4">
     <h3 class="header-small"><i class="fa fa-user"></i> اطلاعات شخصی : </h3>
     
-	<p> نام : <?php echo "$user_row[first_name]"; ?> </p>
-    <p> نام خانوادگی : <?php echo "$user_row[last_name]"; ?> </p>
-    <p> کد ملی : <?php echo "$user_row[melli_code]"; ?> </p>
-    <p> ایمیل : <?php echo "$user_row[email]"; ?> </p>
-    <p> موبایل : <?php echo "$user_row[mobile]"; ?> </p>
+	<p> نام : <?php echo "$user_info_row[first_name]"; ?> </p>
+    <p> نام خانوادگی : <?php echo "$user_info_row[last_name]"; ?> </p>
+    <p> کد ملی : <?php echo "$user_info_row[melli_code]"; ?> </p>
+    <p> ایمیل : <?php echo "$user_info_row[email]"; ?> </p>
+    <p> موبایل : <?php echo "$user_info_row[mobile]"; ?> </p>
+    <p> شهر : <?php echo "$user_info_row[name]"; ?> </p>
+    <p> استان : <?php echo "$user_info_row[province_name]"; ?> </p>
+    <p> آدرس : <?php echo "$user_info_row[address]"; ?> </p>
     <p> پسورد : <?php echo "*******"; ?> </p>
     <div class="text-center">
     <button type="button" class="btn btn-submit" data-toggle="modal" data-target="#myModal">
   ویرایش اطلاعات شخصی
 </button>
 </div>
+</div>
+<div class="clearfix"></div>
+<div class="col-xs-12">
+	 <h3 class="header-small"><i class="fa fa-star"></i> امکانات ویژه : </h3>
+    	<div class="col-sm-2 col-sm-offset-1 text-center">
+        	<div class="text-center">
+        	<img src="<?php echo $prefix; ?>/images/viber.jpg" width="150" class="img-thumbnail">
+            <h4><a href="#" class="btn-special">ارسال وایبر تبلیغاتی</a></h4>
+            </div>
+        </div>
+        <div class="col-sm-2 text-center">
+        <div class="text-center">
+       		<img src="<?php echo $prefix; ?>/images/sms.jpg" width="150" class="img-thumbnail">
+            <h4><a href="#" class="btn-special">ارسال اس ام اس تبلیغاتی</a></h4>
+            </div>
+        </div>
+        <div class="col-sm-2 text-center">
+        	<div class="text-center">
+        	<img src="<?php echo $prefix; ?>/images/email.jpg" width="150" class="img-thumbnail">
+            <h4><a href="#" class="btn-special">ارسال ایمیل تبلیغاتی</a></h4>
+            </div>
+        </div>
+        <div class="col-sm-2 text-center">
+        	<div class="text-center">
+        	<img src="<?php echo $prefix; ?>/images/internet.jpg" width="150" class="img-thumbnail">
+            <h4><a href="#" class="btn-special">اینترنت رایگان</a></h4>
+            </div>
+        </div>
+        <div class="col-sm-2 text-center">
+        	<div class="text-center">
+        	<img src="<?php echo $prefix; ?>/images/web.jpg" width="150" class="img-thumbnail">
+            <h4><a href="#" class="btn-special">طراحی وب سایت</a></h4>
+            </div>
+        </div>
+	
 </div>
 </div>
 

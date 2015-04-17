@@ -196,7 +196,7 @@
     </section>
     <div class="clearfix"></div>
     <footer>
-    	<div class="container text-center">
+    	<div class="col-xs-11 text-center">
         	<div class="col-sm-8 pull-right">
             	<h2>لینک های مرتبط</h2>
                 <hr>
@@ -221,11 +221,12 @@
                 <p>آدرس : خیابان شهید بهشتی ، بعد از خیابان میرعماد، پلاک 294، طبقه پنجم ، واحد 501</p>
                 <p>تلفن : 88759591 - 021</p>
                 <p>خط ویژه : 88507922 - 021</p>
+                 <p>ایمیل : info@118asnafeiran.ir</p>
                 
             </div>
         </div>
-        
-        <p class="text-center social"><a href="#"><img src="<?php echo $prefix; ?>/images/fb.png"></a><a href="#"><img src="<?php echo $prefix; ?>/images/tw.png"></a><a href="#"><img src="images/go.png"></a></p>
+        <div class="clearfix"></div>
+        <p class="text-center social"><a href="#"><img src="<?php echo $prefix; ?>/images/fb.png"></a><a href="#"><img src="<?php echo $prefix; ?>/images/tw.png"></a><a href="#"><img src="<?php echo $prefix; ?>/images/go.png"></a></p>
     </footer>
     <div class="footer-end">
         	<h5 class="text-center">تمامی حقوق این وب سایت متعلق به شرکت یگانه نوآوران پویا می باشد.</h5>

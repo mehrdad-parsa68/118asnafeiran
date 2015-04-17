@@ -76,7 +76,7 @@ footer{
 	background-color:#1D1D1D;
 	color:#FFF;
 	margin-right:50px;
-	height:300px;
+	height:350px;
 	border-bottom:1px solid #FACE0E;
 	}
 footer ul li{
@@ -205,6 +205,25 @@ footer hr {
 	border:1px solid #C6A100;
 
 	}
+.btn-special{
+	background-color:#FACE0E;
+	color:#fff;
+	border:1px solid #9C7F00;
+	padding:10px;
+	border-radius:50%;
+	width:100px;
+	height:100px;
+	display:inline-block;
+	text-decoration:none;
+	padding-top:25px;
+	}
+.btn-special:hover{
+	background-color:#fff;
+	color:#FACE0E;
+	border:1px solid #C6A100;
+	text-decoration:none;
+
+	}	
 .ul-child{
 	float:left;
 	border-left:1px solid #CCC;
