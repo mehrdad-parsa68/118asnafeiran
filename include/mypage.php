@@ -13,16 +13,17 @@ if(!isset($_SESSION['MM_ID'])){
 ?>
 
 <div class="col-xs-12">
-	<h2>پنل مدیریت بانک مشاغل ایران</h2>
-    <hr class="hr-beauty">
+	<h2 class="header-big">پنل مدیریت بانک مشاغل ایران</h2>
+    
     
 
 <div class="col-xs-8">
-    <h3><i class="fa fa-user"></i> اطلاعات شغلی : </h3>
-    <hr class="hr-beauty">
+    <h3 class="header-small"><i class="fa fa-gear"></i> اطلاعات شغلی : </h3>
+  
     <?php 
 		if(!isset($advertise_row)){
 			echo "
+			
 				<p>شما هنوز اطلاعاتی وارد نکرده اید. در صورت نیاز <a href='?page=add'>کلیک</a> کنید.</p>
 			";
 			}
@@ -40,23 +41,28 @@ if(!isset($_SESSION['MM_ID'])){
     <p class="col-sm-6 pull-right"> وب سایت : <?php echo "$advertise_row[website]"; ?> </p>
     <p class="col-sm-6 pull-right"> کلمات کلیدی : <?php echo "$advertise_row[keywords]"; ?> </p>
     <p class="col-sm-6 pull-right"> نقشه گوگل : <?php echo "$advertise_row[google_map]"; ?> </p>
+    <div class="text-center">
     <button type="button" class="btn btn-submit" data-toggle="modal" data-target="#myModal">
   ویرایش اطلاعات شخصی
 </button>
 </div>
+</div>
 
 
 <div class="col-xs-4">
-    <h3><i class="fa fa-user"></i> اطلاعات شخصی : </h3>
-    <hr class="hr-beauty">
-	<p> نام کاربر : <?php echo "$user_row[first_name]"." "."$user_row[last_name]"; ?> </p>
+    <h3 class="header-small"><i class="fa fa-user"></i> اطلاعات شخصی : </h3>
+    
+	<p> نام : <?php echo "$user_row[first_name]"; ?> </p>
+    <p> نام خانوادگی : <?php echo "$user_row[last_name]"; ?> </p>
     <p> کد ملی : <?php echo "$user_row[melli_code]"; ?> </p>
     <p> ایمیل : <?php echo "$user_row[email]"; ?> </p>
     <p> موبایل : <?php echo "$user_row[mobile]"; ?> </p>
     <p> پسورد : <?php echo "*******"; ?> </p>
+    <div class="text-center">
     <button type="button" class="btn btn-submit" data-toggle="modal" data-target="#myModal">
   ویرایش اطلاعات شخصی
 </button>
+</div>
 </div>
 </div>
 

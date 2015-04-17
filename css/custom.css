@@ -237,4 +237,16 @@ hr.hr-normal{
 		height:1px !important;
 		border-color:none !important;
 }
+.header-big{
+	background-color:#fff;
+	border:1px solid #FACE0E;
+	padding:10px;
+	box-shadow:0 0 1px #FACE0E;
+	}
+.header-small{
+	background-color:#fff;
+	border:1px solid #FACE0E;
+	padding:5px;
+	box-shadow:0 0 1px #FACE0E;
+	}
 	
