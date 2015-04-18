@@ -1,73 +1,70 @@
 
-<div>
-
-        <form class="form-horizontal form-light mt-20" role="form" method="post">
-<legend><h2>فرم سفارش</h2></legend>
-	<hr class="hr-header">
+<div class="col-xs-10 col-xs-offset-1 contact">
+	<h3 class="header-big">فرم سفارش طراحی وب سایت</h3>
+    <div class="col-xs-12">
+    <p>برای طراحی وب سایت با 30% تخفیف فرم زیر را تمکیل نمایید. کارشناسان طراحی وب سایت پس از بررسی با شما تماس خواهند گرفت</p>
     <br>
- 	<div class="col-xs-8">
-      <input type="text" class="form-control" id="first_name" placeholder="first name" name="first_name">
-    </div>
-  	<div class="form-group">
-    <label  for="first_name" class="col-xs-4 control-label">نام : </label>
-   
-  	</div>
-   	<div class="col-xs-8">
-      <input type="text" class="form-control" id="last_name" placeholder="last name" name="last_name">
-    </div>
- 	<div class="form-group">
-    <label for="last_name" class="col-xs-4 control-label">نام خانوادگی : </label>
-   
- 	</div>
-    <div class="col-xs-8">
-      <input type="text" class="form-control" id="phone" placeholder="phone" name="phone">
-    </div>
-    <div class="form-group">
-    <label for="phone" class="col-xs-4 control-label">تلفن ثابت : </label>
-    </div>
-  	<div class="col-xs-8">
-      <input type="text" class="form-control" id="mobiles" placeholder="mobile" name="mobile">
-    </div>
-    <div class="form-group">
-    <label for="mobile" class="col-xs-4 control-label">تلفن همراه : </label>
-    </div>
-    
-    <div class="col-xs-8 exo">
-      <input type="emial" class="form-control" id="emial" placeholder="email" name="email">
-    </div>
-    <div class="form-group">
-    <label for="emial" class="col-xs-4 control-label">ایمیل : </label>
-    </div>
-    <div class="col-xs-8">
-    <select class="form-control col-sm-8" name="site_type">
-    	<option>شرکتی</option>
-        <option>شخصی</option>
-        <option>فروشگاهی</option>
-        <option>هنری</option>
-  		<option>سرمایه گذاری</option>
-  		<option>پرتال</option>
-  	</select>
-  	</div>
-  	<div class="form-group">
-  		<label for="seletIdea" class="col-xs-4 control-label">نوع سایت : </label>
-    </div>
-    
-    <div class="col-sm-8 col-xs-8 col-md-8">
-   		 <textarea class="form-control" placeholder="describe your website " rows="5" name="site_description"></textarea>
-    </div>
-    <div class="form-group">
-    	<label for="text" class="col-xs-4 control-label">توضیحات سایت درخواستی : </label>
-    </div>
-    
-
-    <div class="col-sm-3 col-sm-offset-2">
-   		<button type="submit" class="btn btn-success" name="submit">ارسال درخواست</button>
-    </div>
-    <div class="col-sm-3">
-    	<button type="reset" class="btn btn-three">ویرایش</button>
-    </div>
-
- 
-
-</form>
+	<form id="contact-form" role="form" method="post">
+     <div class="form-group name">
+            <label for="name">نام :</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group name">
+            <label for="name">نام خانوادگی : </label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group name">
+            <label for="name"> تلفن :</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+         <div class="form-group name">
+            <label for="name"> موبایل :</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        
+<div class="form-group name">
+            <label for="name">سایت درخواستی :</label>
+            <select class="form-control" id="name" name="name" required>
+             <option>تهران</option>
+                <option>شیراز</option>
+                <option>اصفهان</option>
+                <option>کاشان</option>
+                <option>یزد</option>
+                <option>کیش</option>
+                <option>مشهد</option>
+                <option>تبریز</option>
+            </select>
+        </div>
+        <div class="form-group name">
+	<label for="name">تلفن</label>
+            <input type="text" class="form-control" id="phone" name="phone" required>
+        </div>
+        <div class="form-group email">
+            <label for="email">ایمیل</label>
+            <input type="email" class="form-control" id="mail" name="mail"  required>
+        </div>        
+        <div class="form-group message">
+            <label for="message">سوال شما</label>
+            <textarea class="form-control" rows="6" id="content" name="message"  required></textarea>
+        </div>
+     <div class="form-group">
+         <label>روش ارجح تماس با شما: </label>
+            <br>
+            <div class="radio-inline">
+              <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="phone" checked>
+                تلفن/
+              </label>
+            </div>
+            <div class="radio-inline">
+              <label>
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="mail">
+                ایمیل
+              </label>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <input name="submit" type="submit" value="ارسال پیام" class="btn btn-default">
+    </form>
+</div>
 </div>
