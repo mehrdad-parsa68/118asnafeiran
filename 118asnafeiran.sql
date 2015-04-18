@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 17, 2015 at 09:41 AM
+-- Generation Time: Apr 18, 2015 at 02:02 PM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.12
 
@@ -55,8 +55,8 @@ CREATE TABLE IF NOT EXISTS `advertises` (
 --
 
 INSERT INTO `advertises` (`id`, `name`, `cat_id`, `sub_cat_id`, `slogan`, `city_id`, `province_id`, `address`, `phone`, `mobile`, `email`, `website`, `keywords`, `register_date`, `google_map`, `activate`, `user_id`, `image`) VALUES
-(1, 'شرکت آرتمن رایاوب', 213, 0, 'شما تصور کنید ما طراحی می کنیم', 87, 8, 'images/advertise/1429168823.jpg', '09361946269', '44141868', 'info@rayweb.ir', 'http://rayweb.ir', 'طراحی وب سایت - سایت - طراحی', 1429168823, '', 0, 5, 1429168823),
-(2, 'شرکت آرتمن رایاوب', 213, 0, 'شما تصور کنید ما طراحی می کنیم', 87, 8, '', '09361946269', '44141868', 'info@rayweb.ir', 'http://rayweb.ir', 'طراحی وب سایت - سایت - طراحی', 1429168885, '', 0, 5, 1429168885),
+(1, 'شرکت آرتمن رایاوب', 213, 0, 'شما تصور کنید ما طراحی می کنیم', 87, 8, 'images/advertise/1429168823.jpg', '09361946269', '44141868', 'info@rayweb.ir', 'http://rayweb.ir', 'طراحی وب سایت - سایت - طراحی', 1429168823, '', 0, 9, 1429168823),
+(2, 'شرکت آرتمن رایاوب', 213, 0, 'شما تصور کنید ما طراحی می کنیم', 87, 8, '', '09361946269', '44141868', 'info@rayweb.ir', 'http://rayweb.ir', 'طراحی وب سایت - سایت - طراحی', 1429168885, '', 0, 8, 1429168885),
 (3, 'شرکت آرتمن رایاوب', 213, 0, 'شما تصور کنید ما طراحی می کنیم', 87, 8, 'شهر زیبا خ عدالت ک دوم غربی پ 33', '09361946269', '44141868', 'info@rayweb.ir', 'http://rayweb.ir', 'طراحی وب سایت - سایت - طراحی', 1429168897, '', 0, 7, 1429168897);
 
 -- --------------------------------------------------------
@@ -836,24 +836,22 @@ CREATE TABLE IF NOT EXISTS `users` (
   `melli_code` varchar(250) NOT NULL,
   `email` varchar(250) NOT NULL,
   `mobile` varchar(250) NOT NULL,
+  `city_id` int(11) NOT NULL,
+  `province_id` int(11) NOT NULL,
+  `address` text NOT NULL,
   `password` varchar(250) NOT NULL,
   `register_date` bigint(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `first_name`, `last_name`, `melli_code`, `email`, `mobile`, `password`, `register_date`) VALUES
-(1, 'sd', 'sd', 'sdsdsd', 'mehrdad.parsa68@gmail.com', 'admin', '123', 1424858039),
-(2, 'sd', 'sd', 'sdsdsd', 'mehrdad.parsa68@gmail.com', 'admin', '123', 1424858104),
-(3, 'sd', 'sd', 'sdsdsd', 'mehrdad.parsa68@gmail.com', 'admin', '123', 1424858192),
-(4, 'sd', 'sd', 'sdsdsd', 'mehrdad.parsa68@gmail.com', 'admin', '123', 1424858230),
-(5, 'sd', 'sd', 'sdsdsd', 'mehrdad.parsa68@gmail.com', 'admin', '123', 1424858259),
-(6, 'mehrdad', 'parsa', '5154', 'mehrdad.parsa68@gmail.com', '3234234234', '123', 1425194743),
-(7, 'مهرداد', 'پارسا', '0011171189', 'mehrdad.parsa68@gmail.com', '09301234567', '123', 1428845092),
-(8, 'پویا', 'صبرآموز', '0012345678', 'ddsdssd@yahoo.com', '0995632323', '123', 1429128363);
+INSERT INTO `users` (`id`, `first_name`, `last_name`, `melli_code`, `email`, `mobile`, `city_id`, `province_id`, `address`, `password`, `register_date`) VALUES
+(7, 'مهرداد', 'پارسا', '0011171189', 'mehrdad.parsa68@gmail.com', '09301234567', 8, 87, 'سنیتسیاسی', '123', 1428845092),
+(8, 'پویا', 'صبرآموز', '0012345678', 'ddsdssd@yahoo.com', '0995632323', 8, 87, '', '123', 1429128363),
+(9, 'mehrdad', 'parsa', '0012345678', 'info@sdsd.ir', '09376179571', 102, 0, 'admin', '11', 1429345515);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

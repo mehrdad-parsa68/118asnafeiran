@@ -1,13 +1,10 @@
 <?php
-session_start();
+
+include 'core/core.php';
 
 
-$_SESSION['MM_ID'] = NULL;
-unset($_SESSION);
-
-header("Location: index.php");
   $_SESSION['MM_ID']=NULL;
   unset($_SESSION['MM_ID']);
-  header("Location: index.php");
+  header("Location: $prefix/");
 
 ?>

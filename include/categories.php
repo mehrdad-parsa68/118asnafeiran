@@ -1,5 +1,5 @@
 <div class="col-xs-10 col-xs-offset-1 contact category">
-<h1>فهرست مشاغل : </h1>
+<h3 class="header-big">فهرست مشاغل : </h3>
 <hr>
 <?php
 	$query = "SELECT * FROM category ; ";

@@ -33,20 +33,20 @@ if(!isset($_SESSION['MM_ID'])){
 ?>
 
 <div class="col-xs-12">
-	<h2 class="header-big">پنل مدیریت بانک مشاغل ایران</h2>
+	<h3 class="header-big">پنل مدیریت بانک مشاغل ایران</h3>
     
     
 
 <div class="col-xs-8">
-    <h3 class="header-small"><i class="fa fa-gear"></i> اطلاعات شغلی : </h3>
+    <h4 class="header-small"><i class="fa fa-gear"></i> اطلاعات شغلی : </h4>
   
     <?php 
-		if(!isset($user_row)){
+		if(!isset($user_adv_row)){
 			echo "
 			
-				<p>شما هنوز اطلاعاتی وارد نکرده اید. در صورت نیاز <a href='?page=add'>کلیک</a> کنید.</p>
+				<p>شما هنوز اطلاعاتی وارد نکرده اید. در صورت نیاز <a href='$prefix/page/asnaf/add/'>کلیک</a> کنید.</p>
 			";
-			}
+			}else{
 			
 	?>
 	<p class="col-sm-6 pull-right"> نام واحد شغلی : <?php echo "$user_adv_row[name]"; ?> </p>
@@ -61,16 +61,18 @@ if(!isset($_SESSION['MM_ID'])){
     <p class="col-sm-6 pull-right"> وب سایت : <?php echo "$user_adv_row[website]"; ?> </p>
     <p class="col-sm-6 pull-right"> کلمات کلیدی : <?php echo "$user_adv_row[keywords]"; ?> </p>
     <p class="col-sm-6 pull-right"> نقشه گوگل : <?php echo "$user_adv_row[google_map]"; ?> </p>
+    <?php } ?>
     <div class="text-center">
     <button type="button" class="btn btn-submit" data-toggle="modal" data-target="#myModal">
   ویرایش اطلاعات شخصی
 </button>
+	
 </div>
 </div>
 
 
 <div class="col-xs-4">
-    <h3 class="header-small"><i class="fa fa-user"></i> اطلاعات شخصی : </h3>
+    <h4 class="header-small"><i class="fa fa-user"></i> اطلاعات شخصی : </h4>
     
 	<p> نام : <?php echo "$user_info_row[first_name]"; ?> </p>
     <p> نام خانوادگی : <?php echo "$user_info_row[last_name]"; ?> </p>
@@ -82,7 +84,7 @@ if(!isset($_SESSION['MM_ID'])){
     <p> آدرس : <?php echo "$user_info_row[address]"; ?> </p>
     <p> پسورد : <?php echo "*******"; ?> </p>
     <div class="text-center">
-    <button type="button" class="btn btn-submit" data-toggle="modal" data-target="#myModal">
+    <button type="button" class="btn btn-submit signin" data-toggle="modal" data-target="#myModal">
   ویرایش اطلاعات شخصی
 </button>
 </div>
@@ -93,31 +95,31 @@ if(!isset($_SESSION['MM_ID'])){
     	<div class="col-sm-2 col-sm-offset-1 text-center">
         	<div class="text-center">
         	<img src="<?php echo $prefix; ?>/images/viber.jpg" width="150" class="img-thumbnail">
-            <h4><a href="#" class="btn-special">ارسال وایبر تبلیغاتی</a></h4>
+            <h4><a href="<?php echo $prefix; ?>/page/offer/viber/" class="btn-special">ارسال وایبر تبلیغاتی</a></h4>
             </div>
         </div>
         <div class="col-sm-2 text-center">
         <div class="text-center">
        		<img src="<?php echo $prefix; ?>/images/sms.jpg" width="150" class="img-thumbnail">
-            <h4><a href="#" class="btn-special">ارسال اس ام اس تبلیغاتی</a></h4>
+            <h4><a href="<?php echo $prefix; ?>/page/offer/sms/" class="btn-special">ارسال اس ام اس تبلیغاتی</a></h4>
             </div>
         </div>
         <div class="col-sm-2 text-center">
         	<div class="text-center">
         	<img src="<?php echo $prefix; ?>/images/email.jpg" width="150" class="img-thumbnail">
-            <h4><a href="#" class="btn-special">ارسال ایمیل تبلیغاتی</a></h4>
+            <h4><a href="<?php echo $prefix; ?>/page/offer/mail/" class="btn-special">ارسال ایمیل تبلیغاتی</a></h4>
             </div>
         </div>
         <div class="col-sm-2 text-center">
         	<div class="text-center">
         	<img src="<?php echo $prefix; ?>/images/internet.jpg" width="150" class="img-thumbnail">
-            <h4><a href="#" class="btn-special">اینترنت رایگان</a></h4>
+            <h4><a href="<?php echo $prefix; ?>/page/offer/internet/" class="btn-special">اینترنت رایگان</a></h4>
             </div>
         </div>
         <div class="col-sm-2 text-center">
         	<div class="text-center">
         	<img src="<?php echo $prefix; ?>/images/web.jpg" width="150" class="img-thumbnail">
-            <h4><a href="#" class="btn-special">طراحی وب سایت</a></h4>
+            <h4><a href="<?php echo $prefix; ?>/page/offer/webdesign/" class="btn-special">طراحی وب سایت</a></h4>
             </div>
         </div>
 	

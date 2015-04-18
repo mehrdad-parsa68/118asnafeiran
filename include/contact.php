@@ -1,8 +1,8 @@
 
 <div>
 	<div class="col-md-10 col-md-offset-1 contact">
-		<h2>ارتباط با ما</h2>
-   		 <hr class="hr-normal">
+		<h3 class="header-big">ارتباط با ما</h3>
+   		 	
    	 	<div class="col-sm-6 pull-right text-center">
     	<p>آدرس : </p>
         <p>خیابان شهید بهشتی ، بعد از خیابان میرعماد، پلاک 294، طبقه پنجم ، واحد 501</p>
@@ -22,7 +22,7 @@
         </div>
          <div class="clearfix"></div>
         <div class="col-xs-12">
-        	<h2>ارتباط با مدیریت :</h2>
+        	<h3 class="header-small">ارتباط با مدیریت :</h3>
         	<form id="contact-form" role="form" method="post">
      <div class="form-group name">
             <label for="name"> نام : </label>

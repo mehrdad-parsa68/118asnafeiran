@@ -74,8 +74,8 @@ if(isset($_POST['submit'])){
 	<div class="col-md-10 col-md-offset-1 contact">
 
     <div class="col-sm-12">
-		<h2>ثبت اطلاعات واحد شغلی</h2>
-   		 <hr class="hr-normal">
+		<h3 class="header-big">ثبت اطلاعات واحد شغلی</h3>
+   		<div class="col-sm-12">
          <p><i class="fa fa-star"></i> لطفا اطلاعات خود را با زبان فارسی وارد نمایید.</p>
          <p><i class="fa fa-star"></i>در قسمت کلمات کلیدی، کلمات را با یک فاصله و یک خط تیره (-) از هم جدا نمایید.</p>
          <p><i class="fa fa-star"></i>حجم تصویر تجاری کمتر از 300 کیلوبایت باشد.</p>
@@ -170,7 +170,7 @@ if(isset($_POST['submit'])){
     </div>
   </div>
 </form>
-		
+		</div>
    	 	</div>
         <div class="clearfix"></div>
         <?php echo $error; ?>
@@ -178,7 +178,7 @@ if(isset($_POST['submit'])){
 <script>
 	$("#province").change(function(){
 		val = $("#province").val();
-    $.post("include/province_ajax.php",{province : val},
+    $.post("<?php echo $prefix; ?>/include/province_ajax.php",{province : val},
     function(data, status){
 		$('#city').removeAttr('disabled');
 		$('#city').html(data);

@@ -1,5 +1,11 @@
 <?php
-
+$provinces = '';
+$provinces_query = " SELECT * FROM `province`" ;
+$provinces_result = mysqli_query($connection,$provinces_query);
+while($provinces_row = mysqli_fetch_assoc($provinces_result)){
+		$provinces .="<option value='$provinces_row[id]'>$provinces_row[name]</a>";
+	}
+	
 $error = '';
 if(isset($_POST['submit'])){
 
@@ -8,19 +14,29 @@ if(isset($_POST['submit'])){
 	$melli_code = $_POST['melli_code'];
     $email = $_POST['email'];
 	$mobile = $_POST['mobile'];
+	$city_id = $_POST['city_id'];
+	$province_id = $_POST['province_id'];
+	$address = $_POST['address'];
     $password = $_POST['password'];
     $repassword = $_POST['repassword'];
     $register_date = time();
     if($password == $repassword){
-        $user_query = "INSERT INTO `users`(`id`, `first_name`, `last_name`, `melli_code`, `email`, `mobile`, `password`, `register_date`) VALUES ('','$first_name','$last_name','$melli_code','$email','$mobile','$password','$register_date')";
+        $user_query = "INSERT INTO `users`(`id`, `first_name`, `last_name`, `melli_code`, `email`, `mobile`, `city_id`, `province_id`, `address`, `password`, `register_date`) VALUES ('','$first_name','$last_name','$melli_code','$email','$mobile','$city_id','$provincce_id','$address','$password','$register_date')";
         $user_result = mysqli_query($connection , $user_query);
         if($user_result){
-            $error = '
+           /* $error = '
             <div class="alert alert-success alert-dismissible" role="alert">
               <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               <strong>کاربر گرامی !</strong> ثبت نام با موفقیت انجام شد . خوش آمدید
             </div>
-            ';
+            ';*/
+			$user_login_query = "SELECT * FROM `users` WHERE `melli_code` = '$melli_code' AND `password` = '$password'";
+				$user_login_result = mysqli_query($connection , $user_login_query);
+				$user_login_row = mysqli_fetch_assoc($user_login_result);
+				if($user_login_row){
+					$_SESSION['MM_ID'] = $user_login_row['id'];
+					header("Location: $prefix/page/user/mypage/");
+				}
         }
     }else{
         $error = '
@@ -33,7 +49,7 @@ if(isset($_POST['submit'])){
 }
 
 ?>
-	<div class="col-md-8 col-md-offset-2 contact">
+	<div class="col-md-10 col-md-offset-1 contact">
     <div class="col-sm-5" style="margin-top:93px;">
     <?php if(isset($_GET['msg'])){ echo "<p class='text-center'> برای درج آگهی ابتدا باید ثبت نام کنید </p>"; } ?>
     	<div class="text-center info panel panel-default">
@@ -89,6 +105,26 @@ if(isset($_POST['submit'])){
     </div>
   </div>
   <div class="form-group">
+    <label for="city" class="col-sm-3 control-label pull-right">استان و شهر</label>
+    <div class="col-sm-4">
+      <select type="text" class="form-control pull-right" disabled name="city_id" id="city">
+      </select>
+    </div>
+    <div class="col-sm-5">
+      <select type="text" class="form-control pull-right" name="province_id" id="province">
+      	<option value="-1">استان را انتخاب کنید</option>
+        <?php echo $provinces; ?>
+      </select>
+    </div>
+  </div>
+  
+   <div class="form-group">
+    <label for="address" class="col-sm-3 control-label pull-right">آدرس</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control pull-right" name="address" required>
+    </div>
+  </div>
+  <div class="form-group">
     <label for="password" class="col-sm-3 control-label pull-right">رمز عبور</label>
     <div class="col-sm-9">
       <input type="password" class="form-control pull-right" name="password" required>
@@ -116,3 +152,13 @@ if(isset($_POST['submit'])){
         <div class="clearfix"></div>
         <?php echo $error; ?>
 	</div>
+<script>
+	$("#province").change(function(){
+		val = $("#province").val();
+    $.post("<?php echo $prefix; ?>/include/province_ajax.php",{province : val},
+    function(data, status){
+		$('#city').removeAttr('disabled');
+		$('#city').html(data);
+    });
+});
+</script>

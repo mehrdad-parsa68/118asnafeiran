@@ -37,7 +37,7 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="js/jquery.js"></script>
+    <script src="<?php echo $prefix; ?>/js/jquery.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -50,7 +50,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<?php echo $prefix; ?>/index.php?page=home">
+      <a class="navbar-brand" href="<?php echo $prefix; ?>/">
       	<img src="<?php echo $prefix; ?>/images/logo.png" width="50">
       </a>
     </div>
@@ -119,7 +119,7 @@
 				 $user_query = "SELECT * FROM users WHERE id = '$_SESSION[MM_ID]' ; ";
 				 $user_result = mysqli_query($connection , $user_query);
 				 $user_row = mysqli_fetch_assoc($user_result);
-				 echo '<li><a href="signout.php"><i class="fa fa-sign-out"></i> خروج</a></li>
+				 echo '<li><a href="'.$prefix.'/signout.php"><i class="fa fa-sign-out"></i> خروج</a></li>
 				 	   <li><a href="'.$prefix.'/page/users/mypage/"><i class="fa fa-user"></i> '.$user_row['first_name'].' '.$user_row['last_name'].'</a></li>';
 				 }
          ?>
@@ -131,7 +131,7 @@
 </nav>
 	<nav class="nav-right text-center col-xs-1 pull-right">
     	<div class="nav-ico">
-        <a href="?page=home">
+        <a href="<?php echo $prefix; ?>/">
         	<img src="<?php echo $prefix; ?>/images/logo.png" width="40">
             <br>
             <p class="logo">بانک</p>
