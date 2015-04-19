@@ -114,7 +114,7 @@
          <?php 
 			 if(!isset($_SESSION['MM_ID'])){
 				 echo '<li><a href="'.$prefix.'/page/users/signin/"><i class="fa fa-sign-in"></i> ورود</a></li>
-				 	   <li><a href="'.$prefix.'/page/users/signup/"><i class="fa fa-user"></i> ثبت نام</a></li>';
+				 	   <li><a href="'.$prefix.'/page/users/generate/"><i class="fa fa-user"></i> ثبت نام</a></li>';
 			 }else{
 				 $user_query = "SELECT * FROM users WHERE id = '$_SESSION[MM_ID]' ; ";
 				 $user_result = mysqli_query($connection , $user_query);
