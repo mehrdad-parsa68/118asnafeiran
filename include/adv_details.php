@@ -22,7 +22,7 @@
         <p><?php echo "$adv_row[slogan]"; ?></p>
     </div>
     <div class="clearfix"></div>
-    <div>
+    <div class="col-sm-8 adv-info">
     	<p class="col-sm-6 pull-right"> نام واحد شغلی : <?php echo "$adv_row[name]"; ?> </p>
         <p class="col-sm-6 pull-right"> زمینه فعالیت : <?php echo "$adv_row[cat_name]"; ?> </p>
         <p class="col-sm-6 pull-right"> شعار : <?php echo "$adv_row[slogan]"; ?> </p>
@@ -34,6 +34,8 @@
         <p class="col-sm-6 pull-right"> ایمیل : <?php echo "$adv_row[email]"; ?> </p>
         <p class="col-sm-6 pull-right"> وب سایت : <?php echo "$adv_row[website]"; ?> </p>
         <p class="col-sm-6 pull-right"> کلمات کلیدی : <?php echo "$adv_row[keywords]"; ?> </p>
-        <p class="col-sm-6 pull-right"> نقشه گوگل : <?php echo "$adv_row[google_map]"; ?> </p>
+    </div>
+    <div class="col-sm-4 adv-map">
+    	<iframe src="<?php echo "$adv_row[google_map]"; ?>"></iframe>
     </div>
 </div>

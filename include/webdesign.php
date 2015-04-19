@@ -26,7 +26,7 @@
 	<label for="name">تلفن</label>
             <input type="text" class="form-control" id="phone" name="phone" required>
         </div>
-        <div class="form-group name col-sm-6 pull-right">
+        <div class="form-group name col-sm-6 pull-right styled-select">
             <label for="name">سایت درخواستی :</label>
             <select class="form-control" id="name" name="name" required>
              <option>شخصی</option>
