@@ -6,8 +6,8 @@
         
    
     <div class="advertise">
-    <h2 class="text-center">آخرین آگهی های ثبت شده در بانک مشاغل ایران</h2>
-    <hr class="hr-good">
+    <h3 class="header-big">آخرین آگهی های ثبت شده در بانک مشاغل ایران</h3>
+    <br><br>
     <?php 
 	while($main_row = mysqli_fetch_assoc($main_result)){
 		

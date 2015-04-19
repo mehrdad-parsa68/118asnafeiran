@@ -37,7 +37,7 @@ if(!isset($_SESSION['MM_ID'])){
     
     
 
-<div class="col-xs-8">
+<div class="col-xs-8 panel-detail">
     <h4 class="header-small"><i class="fa fa-gear"></i> اطلاعات شغلی : </h4>
   
     <?php 
@@ -49,18 +49,22 @@ if(!isset($_SESSION['MM_ID'])){
 			}else{
 			
 	?>
-	<p class="col-sm-6 pull-right"> نام واحد شغلی : <?php echo "$user_adv_row[name]"; ?> </p>
-    <p class="col-sm-6 pull-right"> زمینه فعالیت : <?php echo "$user_adv_row[cat_name]"; ?> </p>
-    <p class="col-sm-6 pull-right"> شعار : <?php echo "$user_adv_row[slogan]"; ?> </p>
-    <p class="col-sm-6 pull-right"> استان : <?php echo "$user_adv_row[province_name]"; ?> </p>
-    <p class="col-sm-6 pull-right"> شهرستان : <?php echo "$user_adv_row[city_name]"; ?> </p>
-    <p class="col-sm-6 pull-right"> آدرس : <?php echo "$user_adv_row[address]"; ?> </p>
-    <p class="col-sm-6 pull-right"> تلفن : <?php echo "$user_adv_row[phone]"; ?> </p>
-    <p class="col-sm-6 pull-right"> موبایل : <?php echo "$user_adv_row[mobile]"; ?> </p>
-    <p class="col-sm-6 pull-right"> ایمیل : <?php echo "$user_adv_row[email]"; ?> </p>
-    <p class="col-sm-6 pull-right"> وب سایت : <?php echo "$user_adv_row[website]"; ?> </p>
-    <p class="col-sm-6 pull-right"> کلمات کلیدی : <?php echo "$user_adv_row[keywords]"; ?> </p>
-    <p class="col-sm-6 pull-right"> نقشه گوگل : <?php echo "$user_adv_row[google_map]"; ?> </p>
+	<p class="col-sm-6 pull-right"><span class="detail-title">نام واحد شغلی :  </span><?php echo "$user_adv_row[name]"; ?> </p>
+    <p class="col-sm-6 pull-right"><span class="detail-title"> زمینه فعالیت : </span><?php echo "$user_adv_row[cat_name]"; ?> </p>
+    <p class="col-sm-6 pull-right"><span class="detail-title"> شعار : </span><?php echo "$user_adv_row[slogan]"; ?> </p>
+    <p class="col-sm-6 pull-right"><span class="detail-title"> استان : </span><?php echo "$user_adv_row[province_name]"; ?> </p>
+    <p class="col-sm-6 pull-right"><span class="detail-title"> شهرستان :</span> <?php echo "$user_adv_row[city_name]"; ?> </p>
+    <p class="col-sm-6 pull-right"><span class="detail-title"> آدرس :</span> <?php echo "$user_adv_row[address]"; ?> </p>
+    <p class="col-sm-6 pull-right"><span class="detail-title"> تلفن :</span> <?php echo "$user_adv_row[phone]"; ?> </p>
+    <p class="col-sm-6 pull-right"><span class="detail-title"> موبایل :</span> <?php echo "$user_adv_row[mobile]"; ?> </p>
+    <p class="col-sm-6 pull-right"><span class="detail-title"> ایمیل : </span><?php echo "$user_adv_row[email]"; ?> </p>
+    <p class="col-sm-6 pull-right"><span class="detail-title"> وب سایت : </span>
+    	<a href="#"><?php echo "$user_adv_row[website]"; ?></a>
+    </p>
+    <p class="col-sm-6 pull-right"><span class="detail-title"> کلمات کلیدی : </span><?php echo "$user_adv_row[keywords]"; ?> </p>
+    <p class="col-sm-6 pull-right"><span class="detail-title pull-right"> نقشه گوگل : </span>
+		<iframe width="150" height="150" src="<?php echo "$user_adv_row[google_map]"; ?>"></iframe>
+    </p>
     <?php } ?>
     <div class="text-center">
     <button type="button" class="btn btn-submit" data-toggle="modal" data-target="#myModal">
@@ -71,18 +75,18 @@ if(!isset($_SESSION['MM_ID'])){
 </div>
 
 
-<div class="col-xs-4">
+<div class="col-xs-4 panel-detail">
     <h4 class="header-small"><i class="fa fa-user"></i> اطلاعات شخصی : </h4>
     
-	<p> نام : <?php echo "$user_info_row[first_name]"; ?> </p>
-    <p> نام خانوادگی : <?php echo "$user_info_row[last_name]"; ?> </p>
-    <p> کد ملی : <?php echo "$user_info_row[melli_code]"; ?> </p>
-    <p> ایمیل : <?php echo "$user_info_row[email]"; ?> </p>
-    <p> موبایل : <?php echo "$user_info_row[mobile]"; ?> </p>
-    <p> شهر : <?php echo "$user_info_row[name]"; ?> </p>
-    <p> استان : <?php echo "$user_info_row[province_name]"; ?> </p>
-    <p> آدرس : <?php echo "$user_info_row[address]"; ?> </p>
-    <p> پسورد : <?php echo "*******"; ?> </p>
+	<p><span class="detail-title"> نام : </span><?php echo "$user_info_row[first_name]"; ?> </p>
+    <p><span class="detail-title"> نام خانوادگی : </span><?php echo "$user_info_row[last_name]"; ?> </p>
+    <p><span class="detail-title"> کد ملی : </span><?php echo "$user_info_row[melli_code]"; ?> </p>
+    <p><span class="detail-title"> ایمیل :</span> <?php echo "$user_info_row[email]"; ?> </p>
+    <p><span class="detail-title"> موبایل : </span><?php echo "$user_info_row[mobile]"; ?> </p>
+    <p><span class="detail-title"> شهر : </span><?php echo "$user_info_row[name]"; ?> </p>
+    <p><span class="detail-title"> استان : </span><?php echo "$user_info_row[province_name]"; ?> </p>
+    <p><span class="detail-title"> آدرس :</span> <?php echo "$user_info_row[address]"; ?> </p>
+    <p><span class="detail-title"> پسورد :</span> <?php echo "*******"; ?> </p>
     <div class="text-center">
     <button type="button" class="btn btn-submit signin" data-toggle="modal" data-target="#myModal">
   ویرایش اطلاعات شخصی

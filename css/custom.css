@@ -17,6 +17,16 @@ body{
 	padding:0;
 
 }
+a{
+	-webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+	}
+a:hover{
+	text-decoration:none;
+	}
 .panel-default > .panel-heading{
 	color:#5e5d5d !important;
 	}
@@ -337,6 +347,26 @@ hr.hr-normal{
 .header-small{
 	padding-bottom:10px;
 	border-bottom:dashed 1px #999;
+	}
+
+.detail-title{
+	color:rgba(94,93,93,0.7);
+	font-size:15px;
+	}
+.panel-detail p{
+	font-size:17px;
+	}
+.category-item{
+	padding:10px 0 10px 0;
+	font-size:15px;
+	}
+.message{
+	clear:both;
+	padding:0 15px 0 15px;
+	}
+.form-control:focus{
+	box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(250, 206, 14, 0.6);
+	border:solid 1px #FACE0E;
 	}
 
 	
