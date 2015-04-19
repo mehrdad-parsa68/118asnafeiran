@@ -5,31 +5,22 @@ $error = '';
 if(isset($_POST['submit'])){
 
     $activation_code = $_POST['activation_code'];
-    
-    
-    
-        $activation_query = "INSERT INTO `users`(`id`, `first_name`, `last_name`, `melli_code`, `email`, `mobile`, `city_id`, `province_id`, `address`, `password`, `register_date`) VALUES ('','$first_name','$last_name','$melli_code','$email','$mobile','$city_id','$provincce_id','$address','$password','$register_date')";
-        $activation_result = mysqli_query($connection , $activation_query);
-        if($user_result){
-           /* $error = '
-            <div class="alert alert-success alert-dismissible" role="alert">
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <strong>کاربر گرامی !</strong> ثبت نام با موفقیت انجام شد . خوش آمدید
-            </div>
-            ';*/
-			$user_login_query = "SELECT * FROM `users` WHERE `melli_code` = '$melli_code' AND `password` = '$password'";
-				$user_login_result = mysqli_query($connection , $user_login_query);
-				$user_login_row = mysqli_fetch_assoc($user_login_result);
-				if($user_login_row){
-					$_SESSION['MM_ID'] = $user_login_row['id'];
-					header("Location: $prefix/page/user/mypage/");
+	
+				$user_query = "SELECT * FROM `users` WHERE `activation_code` = '$activation_code' ; ";
+				$user_result = mysqli_query($connection , $user_query);
+				$user_row = mysqli_fetch_assoc($user_result);
+				
+	if($user_row){
+		
+		$_SESSION['MM_SIGNUP'] = $user_row['id'];
+		header("Location: $prefix/page/user/signup/");
 			
-        }
+        
     }else{
         $error = '
         <div class="alert alert-danger alert-dismissible" role="alert">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <strong>خطا!</strong> عدم تطابق کلمه عبور با تکرار آن .
+          <strong>خطا!</strong> کد فعال سازی وارد شده نا معتبر می باشد.
         </div>
         ';
     }
@@ -79,13 +70,3 @@ if(isset($_POST['submit'])){
         <div class="clearfix"></div>
         <?php echo $error; ?>
 	</div>
-<script>
-	$("#province").change(function(){
-		val = $("#province").val();
-    $.post("<?php echo $prefix; ?>/include/province_ajax.php",{province : val},
-    function(data, status){
-		$('#city').removeAttr('disabled');
-		$('#city').html(data);
-    });
-});
-</script>

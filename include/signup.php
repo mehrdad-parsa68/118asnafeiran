@@ -1,4 +1,6 @@
 <?php
+if(!isset($_SESSION['MM_SIGNUP'])){die('ابتدا کد فعال سازی تهیه نمایید.');}
+
 $provinces = '';
 $provinces_query = " SELECT * FROM `province`" ;
 $provinces_result = mysqli_query($connection,$provinces_query);
@@ -21,7 +23,11 @@ if(isset($_POST['submit'])){
     $repassword = $_POST['repassword'];
     $register_date = time();
     if($password == $repassword){
-        $user_query = "INSERT INTO `users`(`id`, `first_name`, `last_name`, `melli_code`, `email`, `mobile`, `city_id`, `province_id`, `address`, `password`, `register_date`) VALUES ('','$first_name','$last_name','$melli_code','$email','$mobile','$city_id','$provincce_id','$address','$password','$register_date')";
+		
+		$id = $_SESSION['MM_SIGNUP'];
+		
+        $user_query = "UPDATE `users` SET `first_name`='$first_name',`last_name`='$last_name',`melli_code`='$melli_code' ,`email`='$email',`mobile`='$mobile',`city_id`='$city_id',`province_id`='$province_id',`address`='$address',`password`='$password',`register_date`='$register_date' WHERE id = '$id' ; ";
+		
         $user_result = mysqli_query($connection , $user_query);
         if($user_result){
            /* $error = '
@@ -34,6 +40,10 @@ if(isset($_POST['submit'])){
 				$user_login_result = mysqli_query($connection , $user_login_query);
 				$user_login_row = mysqli_fetch_assoc($user_login_result);
 				if($user_login_row){
+					
+					$_SESSION['MM_SIGNUP'] = NULL;
+ 					unset($_SESSION['MM_SIGNUP']);
+					
 					$_SESSION['MM_ID'] = $user_login_row['id'];
 					header("Location: $prefix/page/user/mypage/");
 				}
