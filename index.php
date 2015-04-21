@@ -232,15 +232,24 @@
         	<h5 class="text-center">تمامی حقوق این وب سایت متعلق به شرکت یگانه نوآوران پویا می باشد.</h5>
             <h5 class="text-center">طراح : <a href="http://rayweb.ir">رای وب</a></h5>
         </div>
-   	
+      
+<script>
+	var config = {
+		"opacity": 70,
+		"position": "topleft",
+		"path": "/118asnafeiran/images/jq-watermark.png"			};		
+	$(document).ready(function(){
+		$(document).watermark(config);
+	});
+</script>
    
-
-
+<script src="<?php echo $prefix; ?>/js/watermark.jquery.min.js"></script> 
 <script src="<?php echo $prefix; ?>/js/jquery.easing.1.3.js"></script>
 <script src="<?php echo $prefix; ?>/js/bootstrap.min.js"></script>
 <script src="<?php echo $prefix; ?>/js/custom.js"></script>
 <script src="<?php echo $prefix; ?>/js/modernizr.custom.js"></script>
 <script src="<?php echo $prefix; ?>/js/cbpTooltipMenu.min.js"></script>
+
 <script>
 	var menu = new cbpTooltipMenu( document.getElementById( 'cbp-tm-menu' ) );
 </script>

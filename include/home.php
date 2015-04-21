@@ -20,7 +20,7 @@
             </div>
             <div class='panel-body'>
             	<div class='special text-center'>
-					<img src='$prefix/images/advertise/$main_row[image].jpg' width='100%'>
+					<img src='$prefix/images/advertise/$main_row[image].jpg' width='200'  height='200' class='watermark'>
                		<p><a href='#'>$main_row[name]</a></p>
            		 </div>
                  
@@ -40,7 +40,7 @@
             </div>
             <div class="panel-body">
             	<div class="special text-center">
-					<img src="<?php echo $prefix; ?>/images/logo.jpg" width="100%">
+					<img src="<?php echo $prefix; ?>/images/logo.jpg" class="watermark" width="200" height="200">
                		<p>آگهی اول</p>
            		 </div>
                  
@@ -54,7 +54,7 @@
             </div>
             <div class="panel-body">
             	<div class="special text-center">
-					<img src="<?php echo $prefix; ?>/images/logo.jpg" width="100%">
+					<img src="<?php echo $prefix; ?>/images/logo.jpg" class="watermark" width="200" height="200">
                		<p>آگهی اول</p>
            		 </div>
                  
