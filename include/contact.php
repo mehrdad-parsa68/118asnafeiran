@@ -1,20 +1,22 @@
 
 <div>
 	<div class="col-md-10 col-md-offset-1 contact">
+    
 		<h3 class="header-big">ارتباط با ما</h3>
+        <br>
    		 	
    	 	<div class="col-sm-6 pull-right text-center">
     	<p>آدرس : </p>
-        <p>خیابان شهید بهشتی ، بعد از خیابان میرعماد، پلاک 294، طبقه پنجم ، واحد 501</p>
-        <hr class="hr-good">
+        <p class="header-small">خیابان شهید بهشتی ، بعد از خیابان میرعماد، پلاک 294، طبقه پنجم ، واحد 501</p>
+        
         <p>تلفن : </p>
-        <p>88759591 - 021</p>
-        <hr class="hr-good">
+        <p class="header-small">88759591 - 021</p>
+       
         <p>خط ویژه : </p>
-        <p>88507922 - 021</p>
-        <hr class="hr-good">
+        <p class="header-small">88507922 - 021</p>
+        
         <p>ایمیل :</p>
-        <p>info@iranm118.ir</p>
+        <p class="header-small">info@iranm118.ir</p>
    	 	</div>
 	
     	<div class="col-sm-6">
