@@ -94,38 +94,45 @@ if(!isset($_SESSION['MM_ID'])){
 </div>
 </div>
 <div class="clearfix"></div>
-<div class="col-xs-12">
+<div class="col-xs-12 offer">
 	 <h3 class="header-small"><i class="fa fa-star"></i> امکانات ویژه : </h3>
-    	<div class="col-sm-2 col-sm-offset-1 text-center">
+    	<div class="col-sm-4 text-center">
         	<div class="text-center">
-        	<img src="<?php echo $prefix; ?>/images/viber.jpg" width="150" class="img-thumbnail">
-            <h4><a href="<?php echo $prefix; ?>/page/offer/viber/" class="btn-special">ارسال وایبر تبلیغاتی</a></h4>
+        	<img src="<?php echo $prefix; ?>/images/viber.jpg" width="250" class="img-thumbnail">
+            <h4><a href="<?php echo $prefix; ?>/page/offer/viber/" class="btn-special">دانلود نرم افزار ارسال انبوه وایبر <br>+<br> بانک شماره تلفن <br>+<br> آموزش استفاده</a></h4>
             </div>
         </div>
-        <div class="col-sm-2 text-center">
+        <div class="col-sm-4 text-center">
         <div class="text-center">
-       		<img src="<?php echo $prefix; ?>/images/sms.jpg" width="150" class="img-thumbnail">
-            <h4><a href="<?php echo $prefix; ?>/page/offer/sms/" class="btn-special">ارسال اس ام اس تبلیغاتی</a></h4>
+       		<img src="<?php echo $prefix; ?>/images/information.jpg" width="250" class="img-thumbnail">
+            <h4><a href="<?php echo $prefix; ?>/page/offer/information/" class="btn-special" style="padding-top:50px">دانلود اطلاعات مشاغل کل کشور به تفکیک شهر، استان و صنف</a></h4>
             </div>
         </div>
-        <div class="col-sm-2 text-center">
+        <div class="col-sm-4 text-center">
         	<div class="text-center">
-        	<img src="<?php echo $prefix; ?>/images/email.jpg" width="150" class="img-thumbnail">
-            <h4><a href="<?php echo $prefix; ?>/page/offer/mail/" class="btn-special">ارسال ایمیل تبلیغاتی</a></h4>
+        	<img src="<?php echo $prefix; ?>/images/email.jpg" width="250" class="img-thumbnail">
+            <h4><a href="<?php echo $prefix; ?>/page/offer/mail/" class="btn-special">دانلود بانک ایمیل به تفکیک مشاغل <br> + <br> نرم افزار ارسال <br> + <br> آموزش استفاده</a></h4>
             </div>
         </div>
-        <div class="col-sm-2 text-center">
+        <div class="col-sm-4 text-center">
         	<div class="text-center">
-        	<img src="<?php echo $prefix; ?>/images/internet.jpg" width="150" class="img-thumbnail">
-            <h4><a href="<?php echo $prefix; ?>/page/offer/internet/" class="btn-special">اینترنت رایگان</a></h4>
+        	<img src="<?php echo $prefix; ?>/images/internet.jpg" width="250" class="img-thumbnail">
+            <h4><a href="<?php echo $prefix; ?>/page/offer/internet/" class="btn-special" style="padding-top:55px">دسترسی به 3 ماه اینترنت رایگان</a></h4>
             </div>
         </div>
-        <div class="col-sm-2 text-center">
+        <div class="col-sm-4 text-center">
         	<div class="text-center">
-        	<img src="<?php echo $prefix; ?>/images/web.jpg" width="150" class="img-thumbnail">
-            <h4><a href="<?php echo $prefix; ?>/page/offer/webdesign/" class="btn-special">طراحی وب سایت</a></h4>
+        	<img src="<?php echo $prefix; ?>/images/bon.jpg" width="250" class="img-thumbnail">
+            <h4><a href="<?php echo $prefix; ?>/page/offer/bontime/" class="btn-special" style="padding-top:55px">دسترسی به بن کارت های روزانه</a></h4>
             </div>
         </div>
+        <div class="col-sm-4 text-center">
+        	<div class="text-center">
+        	<img src="<?php echo $prefix; ?>/images/web.jpg" width="250" class="img-thumbnail">
+            <h4><a href="<?php echo $prefix; ?>/page/offer/webdesign/" class="btn-special" style="padding-top:55px">طراحی وب سایت با 30% تخفیف</a></h4>
+            </div>
+        </div>
+        
 	
 </div>
 </div>

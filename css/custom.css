@@ -205,26 +205,7 @@ footer hr {
 	
 	height:400px;
 	
-	}/*
-.btn-submit{
-	background-color:#ffe36a;
-	color:#9C7F00;
-	border:1px solid #9C7F00;
-	padding:10px;
-	-webkit-transition: all .2s;
-    -moz-transition: all .2s;
-    -ms-transition: all .2s;
-    -o-transition: all .2s;
-    transition: all .2s;
-	box-shadow: 2px 2px 0px 1px #9c7f00;
-	border-radius:5px;
 	}
-.btn-submit:hover{
-	color:#9C7F00;
-	box-shadow:1px 1px 0px 1px #9c7f00;
-	}
-	*/
-/* ----------------------- */
 .btn-submit {
     border: none;
     font-family: inherit;
@@ -292,8 +273,8 @@ footer hr {
 	border:1px solid #9C7F00;
 	padding:10px;
 	border-radius:50%;
-	width:100px;
-	height:100px;
+	width:159px;
+	height:150px;
 	display:inline-block;
 	text-decoration:none;
 	padding-top:25px;
@@ -430,5 +411,62 @@ select {
 .phone-no{
 	
 	}
-
+.offer h4{
+	font-size:16px;
+	}
+.viber a{
+	font-size:18px;
+	}
 	
+/* check box style */
+
+label {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+input[type=checkbox].css-checkbox {
+	position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height:1px; 
+    width:1px; 
+    margin:-1px; 
+    padding:0;
+    border:0;
+	
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+	padding-right:25px;
+    height:20px; 
+	display:inline-block;
+	line-height:20px;
+	background-repeat:no-repeat;
+	background-position: right top;
+	font-size:15px;
+	vertical-align:middle;
+    cursor:pointer;
+	background-image:url(http://csscheckbox.com/checkboxes/vlad.png);
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+	background-position: right bottom;
+}
+
+/* input[type=file] style */
+
+#upload-file-container {
+   background: url(images/custom-file-input.png) no-repeat;
+}
+
+#upload-file-container input {
+   filter: alpha(opacity=0);
+   opacity: 0;
+}
+
+

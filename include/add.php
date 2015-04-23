@@ -2,7 +2,7 @@
 
 if(!isset($_SESSION['MM_ID'])){
 
-	header('Location: index.php?page=signup&msg=failed');
+	header("Location: $prefix/page/user/signup/");
 	}
 	
 
@@ -48,7 +48,7 @@ if(isset($_POST['submit'])){
 		$address = "images/advertise/$picture[name]";
 		move_uploaded_file($picture['tmp_name'],$address);
 		
-        $advertise_query = "INSERT INTO `advertises`(`id`, `name`, `cat_id`, `sub_cat_id`, `slogan`, `city_id`, `province_id`, `address`, `phone`, `mobile`, `email`, `website`, `keywords`, `register_date`, `google_map`, `activate`, `user_id`,`image`) VALUES ('','$name','$cat_id','0','$slogan','$city_id','$province_id','$location','$phone','$mobile','$email','$website','$keywords','$register_date','','0','5','$picture[name]')";
+        $advertise_query = "INSERT INTO `advertises`(`id`, `name`, `cat_id`, `sub_cat_id`, `slogan`, `city_id`, `province_id`, `address`, `phone`, `mobile`, `email`, `website`, `keywords`, `register_date`, `google_map`, `activate`, `user_id`,`image`) VALUES ('','$name','$cat_id','0','$slogan','$city_id','$province_id','$location','$phone','$mobile','$email','$website','$keywords','$register_date','','0','$_SESSION[MM_ID]','$picture[name]')";
 		echo $advertise_query;
         $advertise_result = mysqli_query($connection , $advertise_query);
 		var_dump($advertise_result);

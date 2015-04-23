@@ -1,7 +1,8 @@
 
 <div class="col-xs-10 col-xs-offset-1 contact">
-	<h3 class="header-big">فرم سفارش طراحی وب سایت</h3>
+	<h3 class="header-big">امکانات ویژه</h3>
     <div class="col-xs-12">
+    <h4 class="header-small">فرم سفارش طراحی وب سایت</h4>
     <p>برای طراحی وب سایت با 30% تخفیف فرم زیر را تمکیل نمایید. کارشناسان طراحی وب سایت پس از بررسی با شما تماس خواهند گرفت</p>
     <br>
 	<form id="contact-form" role="form" method="post">

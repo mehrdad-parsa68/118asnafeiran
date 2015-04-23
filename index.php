@@ -237,7 +237,7 @@
 	var config = {
 		"opacity": 70,
 		"position": "topleft",
-		"path": "/118asnafeiran/images/jq-watermark.png"			};		
+		"path": "/118asnafeiran/images/watermark.png"			};		
 	$(document).ready(function(){
 		$(document).watermark(config);
 	});
