@@ -5,7 +5,7 @@
  Persian (فارسی) initialisation for the jQuery countdown extension
  Written by Alireza Ziaie (ziai@magfa.com) Oct 2008.
  Digits corrected by Hamed Ramezanian Feb 2013. */
-(function($) {
+/*(function($) {
     $.countdown.regionalOptions['fa'] = {
         labels: ['‌سال', 'ماه', 'هفته', 'روز', 'ساعت', 'دقیقه', 'ثانیه'],
         labels1: ['سال', 'ماه', 'هفته', 'روز', 'ساعت', 'دقیقه', 'ثانیه'],
@@ -27,6 +27,6 @@ $(function () {
         $('#year').text(austDay.getFullYear());
     });
 	
-$('#myModal').modal('toggle')
+$('#myModal').modal('toggle')*/
 
 
