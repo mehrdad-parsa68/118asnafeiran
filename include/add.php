@@ -3,13 +3,7 @@
 if(!isset($_SESSION['MM_ID'])){
 
 	header("Location: $prefix/page/user/signup/");
-	}
-	
-
-
-
-			 
-			 
+}		 
 
 $error = '';
 

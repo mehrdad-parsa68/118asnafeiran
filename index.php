@@ -157,12 +157,52 @@
                 <p>فهرست مشاغل</p>
             </a>
         </div>
-        <div class="nav-ico">
-        	<a href="<?php echo $prefix; ?>/page/asnaf/add/">
-        		<p><i class="fa fa-plus"></i></p>
-                <p>درج آگهی</p>
-            </a>
-        </div>
+        <?php
+        if(isset($_SESSION['MM_ID'])){
+			$id = $_SESSION['MM_ID'];
+		$user_adv_query = "SELECT advertises.id, advertises.name, advertises.cat_id, 
+					advertises.sub_cat_id, advertises.slogan, advertises.city_id, advertises.province_id, 
+					advertises.address, advertises.phone, advertises.mobile, advertises.email, 
+					advertises.website, advertises.keywords, advertises.google_map, advertises.image,
+					 city.id, city.name AS city_name, city.province,category.name AS cat_name,
+					 province.id, province.name AS province_name
+					  FROM `advertises`
+					
+						INNER JOIN `city` ON advertises.city_id = city.id
+						INNER JOIN `province` ON advertises.province_id = province.id
+						INNER JOIN `category` ON category.id = advertises.cat_id
+					  WHERE advertises.user_id = $id ; ";
+			$user_adv_result = mysqli_query($connection,$user_adv_query);
+			$user_adv_row =  mysqli_fetch_assoc($user_adv_result);
+			 
+			if(isset($user_adv_row)){
+				echo '<div class="nav-ico">
+					<a href="'.$prefix.'/page/asnaf/addImage/">
+						<p><i class="fa fa-plus"></i></p>
+						<p>اضافه کردن تصویر</p>
+					</a>
+				</div>';
+			}else{
+				echo '<div class="nav-ico">
+					<a href="'.$prefix.'/page/asnaf/add/">
+						<p><i class="fa fa-plus"></i></p>
+						<p>درج آگهی</p>
+					</a>
+				</div>';
+				
+				}
+			
+	}else{
+		echo '<div class="nav-ico">
+					<a href="'.$prefix.'/page/asnaf/add/">
+						<p><i class="fa fa-plus"></i></p>
+						<p>درج آگهی</p>
+					</a>
+				</div>';
+		}
+		
+		?>
+        
         <div class="nav-ico">
         	<a href="<?php echo $prefix; ?>/page/asnaf/search/">
         		<p><i class="fa fa-search"></i></p>

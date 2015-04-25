@@ -10,10 +10,10 @@
         
     </div>
     <br>
-	<div class="text-center"><a href="#">دانلود نرم افزار ارسال انبوه وایبر</a></div>
+	<div class="text-center"><a href="http://barincard.com/viber/abzar.rar">دانلود نرم افزار ارسال انبوه وایبر</a></div>
     <br>
-    <div class="text-center"><a href="#">دانلود بانک شماره تلفن همراه</a></div>
+    <div class="text-center"><a href="http://barincard.com/viber/bank.rar">دانلود بانک شماره تلفن همراه</a></div>
     <br>
-    <div class="text-center"><a href="#">دانلود آموزش نحوه استفاده از نرم افرار</a></div>
+    <div class="text-center"><a href="http://barincard.com/viber/amoozesh.rar">دانلود آموزش نحوه استفاده از نرم افرار</a></div>
 </div>
 </div>

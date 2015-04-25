@@ -59,11 +59,11 @@ if(!isset($_SESSION['MM_ID'])){
     <p class="col-sm-6 pull-right"><span class="detail-title"> موبایل :</span> <?php echo "$user_adv_row[mobile]"; ?> </p>
     <p class="col-sm-6 pull-right"><span class="detail-title"> ایمیل : </span><?php echo "$user_adv_row[email]"; ?> </p>
     <p class="col-sm-6 pull-right"><span class="detail-title"> وب سایت : </span>
-    	<a href="#"><?php echo "$user_adv_row[website]"; ?></a>
+    	<a href="<?php echo "$user_adv_row[website]"; ?>"><?php echo "$user_adv_row[website]"; ?></a>
     </p>
     <p class="col-sm-6 pull-right"><span class="detail-title"> کلمات کلیدی : </span><?php echo "$user_adv_row[keywords]"; ?> </p>
-    <p class="col-sm-6 pull-right"><span class="detail-title pull-right"> نقشه گوگل : </span>
-		<iframe width="150" height="150" src="<?php echo "$user_adv_row[google_map]"; ?>"></iframe>
+    <p class="col-sm-6 pull-right"><span class="detail-title pull-right"> تصویر نشان تجاری : </span>
+		<img width="100" height="100" src="<?php echo $prefix; ?>/images/advertise/<?php echo "$user_adv_row[image]"; ?>.jpg">
     </p>
     <?php } ?>
     <div class="text-center">
