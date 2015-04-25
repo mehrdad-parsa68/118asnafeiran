@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.14
+-- version 4.0.4
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2015 at 11:41 PM
--- Server version: 5.6.17
--- PHP Version: 5.5.12
+-- Generation Time: Apr 25, 2015 at 07:55 AM
+-- Server version: 5.6.12-log
+-- PHP Version: 5.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `118asnafeiran`
 --
+CREATE DATABASE IF NOT EXISTS `118asnafeiran` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `118asnafeiran`;
 
 -- --------------------------------------------------------
 
@@ -750,6 +752,121 @@ INSERT INTO `city` (`id`, `name`, `province`) VALUES
 (435, ' مهريز', 31),
 (436, ' ميبد', 31),
 (437, ' يزد', 31);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `etelaat`
+--
+
+CREATE TABLE IF NOT EXISTS `etelaat` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(250) NOT NULL,
+  `url` varchar(250) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=97 ;
+
+--
+-- Dumping data for table `etelaat`
+--
+
+INSERT INTO `etelaat` (`id`, `name`, `url`) VALUES
+(1, 'ابزار فروشان ویراق الات صنعتی', 'abzarforoshanvayaraghsanati.zip'),
+(2, 'اتوسرویس و تعویض روغن کاران ماشین کشور', 'otoservicevatavizroghankaranmashinkeshvar.zip'),
+(3, 'اطلاعات آرایشگاه های زنانه کشور', 'etelaatarayeshgahhayezananekeshvar.zip'),
+(4, 'اطلاعات آرایشگاه های مردانه', 'etelaatearayeshgahhayemardane.zip'),
+(5, 'اطلاعات کارگاه های جوشکاری فلز', 'etelaatekargahhayejooshkarifelez.zip'),
+(6, 'اطلاعات کارواش و اتوسرویس کاران اتومبیل کشور', 'etelaatekarvasvaotoservicekaraneotomobilekeshvar.zip'),
+(7, 'اطلاعات لبنيات فروش های کشور', 'etelaatelabaniyatforooshkeshvar.zip'),
+(8, 'اطلاعات لوله کشان گاز و نصاب لوازم گاز سوز', 'etelaateloolekeshangazvanasablavazemgazsooz.zip'),
+(9, 'بارانی و کاپشن دوزی', 'baranivakapshendoozi.zip'),
+(10, 'بافندگی انواع مسنوجات سنتی', 'bafandegianvaemansoojatsonati.zip'),
+(11, 'پیراهن دوزی', 'pirahandoozi.zip'),
+(12, 'تالارهاي پذيرايي کشور', 'talarhayepaziraikeshvar.zip'),
+(13, 'تریکو دوزی', 'trikodoozi.zip'),
+(14, 'تعمیرکاران ماشین سبک', 'tamirkaranmashinsabok.zip'),
+(15, 'تعمیرکاران موتور سیکلت', 'tamirkaranmotorsiklet.zip'),
+(16, 'تودوزی انواع خودرو', 'toodoozianvaekhodro.zip'),
+(17, 'تولید آجر', 'tolidajor.zip'),
+(18, 'تولید انواع کیف', 'tolidanvaekif.zip'),
+(19, 'تولید تابلو پلاستیکی', 'tolidtablopelastiki.zip'),
+(20, 'تولید چمدان و ساک', 'tolidchamedanvasaak.zip'),
+(21, 'تولید کارتن مقوایی', 'tolidkartonmoghavai.zip'),
+(22, 'تولید کاشی و سرامیک', 'tolidkashivaseramik.zip'),
+(23, 'تولید کفش ماشینی', 'tolidkafshmashini.zip'),
+(24, 'تولید لباس بچه', 'tolidlebasbache.zip'),
+(25, 'تولید لباس زیر زنانه', 'tolidlebaszirzanane.zip'),
+(26, 'تولید مانتو شلوار ولباس زنانه سفارشی', 'tolidmantoshalvarvalebaszananesefareshi.zip'),
+(27, 'جوراب بافی', 'joorabbafi.zip'),
+(28, 'چوب بری', 'choobbori.zip'),
+(29, 'حروف چینی و خدمات نشر', 'horoofchinivakhadamatenashr.zip'),
+(30, 'خدمات چاپ و تکثیر', 'khadamatetaksirvachaap.zip'),
+(31, 'خراطی و تولید ابزار الات چوبی', 'kharativatolidabzaralatechoobi.zip'),
+(32, 'خرده فروشان پوشاک مردانه', 'khordeforooshanepooshakemardane.zip'),
+(33, 'خرده فروشندگان پوشاک زنانه', 'khordeforooshandeganepooshakrezanane.zip'),
+(34, 'خرده فروشی انواع گوشت قرمز', 'khordeforooshigoosheteghermez.zip'),
+(35, 'خرده فروشی انواع مرغ و ماهی', 'khordeforooshianvaemorghvamahi.zip'),
+(36, 'خرده فروشی طلا و جواهرات', 'khordeforooshitalavajavaherat.zip'),
+(37, 'خرده فروشی فراورده های گوشتی', 'khorderforooshifaravardehayegooshti.zip'),
+(38, 'خرده فروشی کتاب', 'khordeforooshiketab.zip'),
+(39, 'خرده و عمده فروشان ساعت و ساعت سازی', 'khordevaomdeforoshanesaatvasaatsazi.zip'),
+(40, 'درب و پنجره سازان کشور', 'darbvapanjeresazankeshvar.zip'),
+(41, 'دوخت نصب و تعمیر انواع پرده', 'dookhtnasbvatamiranvaeparde.zip'),
+(42, 'دوخت وتعمیر انواع چادر و خیمه', 'dookhtvatamiranvaechadorvakheyme.zip'),
+(43, 'دوزندگی لباس نظامی', 'doozandegilebasnezami.zip'),
+(44, 'رستوران ها و چلوکبابی های کشور', 'restoranhavacholokababihayekeshvar.zip'),
+(45, 'سازندگان و فروشندگان باطری خودرو', 'sazandeganvaforoshandeganebatrikhodro.zip'),
+(46, 'ساندویچ فروشی و پیتزا فروشی', 'sandwichforooshivapitzaforoshi.zip'),
+(47, 'سری دوزی لباس زنانه', 'seridoozilebaszanane.zip'),
+(48, 'سری دوزی لباس مردانه', 'seridoozilebasmardane.zip'),
+(49, 'سنگ بری', 'sangbori.zip'),
+(50, 'صافکاران اتومبيل وگلگیرسازان', 'safkaranotomobilvagelgirsazan.zip'),
+(51, 'صباغی و رنگرزی و گل زنی انواع نخ و پارچه', 'sabaghivarangrazivagolzanianvaenakhvaparche.zip'),
+(52, 'صحافی', 'sahafi.zip'),
+(53, 'عطاری های کشور', 'attarihayekeshvar.zip'),
+(54, 'عمده فروش لوازم خانگی', 'omdeforooshilavazemkhanegi.zip'),
+(55, 'عمده فروشان مواد غذايي', 'omdeforoshanmavadeghazai.zip'),
+(56, 'عمده و خرده فروش عینک', 'omdevakhordeforosheynak.zip'),
+(57, 'عمده و خرده فروشی ظروف و لوازم آشپزخانه', 'omdevakhordeforooshilavazemashpazkhane.zip'),
+(58, 'عمده و خرده فروشی مواد و مصنوعات پلاستیکی', 'omdevakhordeforooshimavadvamasnooatepelastiki.zip'),
+(59, 'فروشندگان ابزار ویراق الات ساختمانی', 'forooshandeganabzarvayaraghsakhtemani.zip'),
+(60, 'فروشندگان آبميوه و بستني', 'forooshandeganabmivevabastani.zip'),
+(61, 'فروشندگان آجيل و خشكبار(خرده فروشان)', 'forooshandeganeajilvakhoshkbarkhorde.zip'),
+(62, 'فروشندگان آجيل و خشكبار(عمده فروشان)', 'forooshandeganajilvakhoshkbaromde.zip'),
+(63, 'فروشندگان پارچه', 'forooshandeganparche.zip'),
+(64, 'فروشندگان پوشاک نوزاد وبچگانه', 'forooshandeganpooshakenozadvabachegane.zip'),
+(65, 'فروشندگان چوب الوار و مصنوعات چوبی', 'forooshandeganchoobalvarvamasnooatechoobi.zip'),
+(66, 'فروشندگان سیسمونی', 'forooshandeganesismooni.zip'),
+(67, 'فروشندگان فرش دست بافت', 'forooshandeganfarshedastbaft.zip'),
+(68, 'فروشندگان کلاه و لوازم ایمنی', 'forooshandeganekolahvalavazemimeni.zip'),
+(69, 'فروشندگان لوازم بهداشتی ساختمان', 'forooshandeganlavazembehdashtisakhteman.zip'),
+(70, 'فروشندگان لوازم خانگی برقی کشور', 'forooshandeganelavazemkhanegibarghikeshvar.zip'),
+(71, 'فروشندگان لوازم صوتی و تصویری کشور', 'forooshandeganlavazemsotitasvirikeshvar.zip'),
+(72, 'فروشندگان لوازم ورزشی', 'forooshandeganlavazemvarzeshi.zip'),
+(73, 'فروشندگان موتور سیکلت و لوازم یدکی آن', 'forooshandeganmotorsikletvalavazemyadakian.zip'),
+(74, 'فروشندگان ميوه و تره بار', 'forooshandeganmivevatarebar.zip'),
+(75, 'فروشندگان نوشت افزار و لوازم تحرير', 'forooshandeganneveshtafzarvalavazemtahrir.zip'),
+(76, 'قنادان و شیرینی پزان کشور', 'ghanadanvashirinipazanekeshvar.zip'),
+(77, 'قهوه خانه و چایخانه و کافی شاپ', 'ghahvekhanevachaykhanevakafishop.zip'),
+(78, 'کافی نت', 'kafinet.zip'),
+(79, 'کت و شلوار دوزی', 'kotshalvardoozi.zip'),
+(80, 'کشبافی', 'keshbafi.zip'),
+(81, 'کفش دوزی(دستی)', 'kafshzdoozidasti.zip'),
+(82, 'لباس کار دوزی', 'lebaskaardoozi.zip'),
+(83, 'لحاف تشک پشتی و بالش دوزی', 'lahaftoshakposhtibaleshdoozi.zip'),
+(84, 'لیتو گرافی و کلیشه سازی', 'litogerafivakelishesazi.zip'),
+(85, 'مشاورین املاک', 'moshaverinamlak.zip'),
+(86, 'منبت کاری', 'monabatkari.zip'),
+(87, 'نان بربری سنتی', 'nanbarbarisonati.zip'),
+(88, 'نان تافتون سنتی', 'nantaftoonsonati.zip'),
+(89, 'نان تافتون ماشینی', 'nantaftoonmashini.zip'),
+(90, 'نان حجیم و فانتزی', 'nanhajimfantezi.zip'),
+(91, 'نان سنگک سنتی', 'nansangaksonati.zip'),
+(92, 'نان سنگک ماشینی', 'nansangakmashini.zip'),
+(93, 'نان لواش سنتی', 'nanlavashsonati.zip'),
+(94, 'نان لواش ماشینی', 'nanlavashemashini.zip'),
+(95, 'نبات و آبنبات سازان کشور', 'nabatvaabnabatsazankeshvar.zip'),
+(96, 'نقاشان اتومبيل کشور', 'naghashaneotomobilkeshvar.zip');
 
 -- --------------------------------------------------------
 
