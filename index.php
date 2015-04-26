@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo $prefix; ?>/css/style.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $prefix; ?>/css/component.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $prefix; ?>/font-awesome/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -289,6 +290,8 @@
 <script src="<?php echo $prefix; ?>/js/custom.js"></script>
 <script src="<?php echo $prefix; ?>/js/modernizr.custom.js"></script>
 <script src="<?php echo $prefix; ?>/js/cbpTooltipMenu.min.js"></script>
+<script src="<?php echo $prefix; ?>/js/jquery.form.min.js"></script>
+<script src="<?php echo $prefix; ?>/js/script.js"></script>
 
 <script>
 	var menu = new cbpTooltipMenu( document.getElementById( 'cbp-tm-menu' ) );

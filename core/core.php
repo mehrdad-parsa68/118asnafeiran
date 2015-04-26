@@ -8,7 +8,7 @@ if($_SERVER['SERVER_ADDR'] == '127.0.0.1' || $_SERVER['SERVER_ADDR'] == '::1'){
 	}else{
 	define("LOCAL_MODE" , 0);
 }
-
+define('BASE_PATH','http://localhost/118asnafeiran/');
 ##### Configs ######
 if(LOCAL_MODE == 0){
 	define('HOST_NAME','localhost');
