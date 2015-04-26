@@ -12,10 +12,10 @@ define('BASE_PATH','http://localhost/118asnafeiran/');
 ##### Configs ######
 if(LOCAL_MODE == 0){
 	define('HOST_NAME','localhost');
-	define('USER_NAME','rayweb');
-	define('PASSWORD','Rayweb1393');
-	define('DB_NAME','rayweb');
-	$prefix = '';
+	define('USER_NAME','118asnafeiran');
+	define('PASSWORD','118asnafeiran');
+	define('DB_NAME','118asnafeiran');
+	$prefix = 'http://other.rayweb.ir/118asnafeiran';
 }else if(LOCAL_MODE == 1){
 	define('HOST_NAME','localhost');
 	define('USER_NAME','root');
