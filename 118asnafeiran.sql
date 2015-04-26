@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2015 at 07:55 AM
+-- Generation Time: Apr 26, 2015 at 06:49 AM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.12
 
@@ -867,6 +867,21 @@ INSERT INTO `etelaat` (`id`, `name`, `url`) VALUES
 (94, 'نان لواش ماشینی', 'nanlavashemashini.zip'),
 (95, 'نبات و آبنبات سازان کشور', 'nabatvaabnabatsazankeshvar.zip'),
 (96, 'نقاشان اتومبيل کشور', 'naghashaneotomobilkeshvar.zip');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `images`
+--
+
+CREATE TABLE IF NOT EXISTS `images` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `original_image` varchar(250) NOT NULL,
+  `thumbnail_image` varchar(250) NOT NULL,
+  `ip_address` varchar(50) NOT NULL,
+  `advertise_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=101 ;
 
 -- --------------------------------------------------------
 
